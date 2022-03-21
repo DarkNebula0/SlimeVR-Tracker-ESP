@@ -35,30 +35,36 @@
 #define DATA_TYPE_NORMAL 1
 #define DATA_TYPE_CORRECTION 2
 
-class Sensor
-{
+class Sensor {
 public:
     Sensor(const char *sensorName, uint8_t type, uint8_t id, uint8_t address, float rotation)
-        : addr(address), sensorId(id), sensorType(type), sensorOffset({Quat(Vector3(0, 0, 1), rotation)}), m_Logger(SlimeVR::Logging::Logger(sensorName))
-    {
+            : addr(address), sensorId(id), sensorType(type), sensorOffset({Quat(Vector3(0, 0, 1), rotation)}),
+              m_Logger(SlimeVR::Logging::Logger(sensorName)) {
         char buf[4];
         sprintf(buf, "%u", id);
         m_Logger.setTag(buf);
     }
 
-    virtual ~Sensor(){};
-    virtual void motionSetup(){};
-    virtual void motionLoop(){};
+    virtual ~Sensor() {};
+
+    virtual void motionSetup() {};
+
+    virtual void motionLoop() {};
+
     virtual void sendData();
-    virtual void startCalibration(int calibrationType){};
+
+    virtual void startCalibration(int calibrationType) {};
+
     virtual uint8_t getSensorState();
-    bool isWorking()
-    {
+
+    bool isWorking() {
         return working;
     };
+
     uint8_t getSensorId() {
         return sensorId;
     };
+
     uint8_t getSensorType() {
         return sensorType;
     };
@@ -79,7 +85,7 @@ protected:
     SlimeVR::Logging::Logger m_Logger;
 };
 
-const char * getIMUNameByType(int imuType);
+const char *getIMUNameByType(int imuType);
 
 enum SensorStatus {
     SENSOR_OFFLINE = 0,

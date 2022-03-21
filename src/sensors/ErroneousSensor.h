@@ -26,20 +26,23 @@
 
 #include "sensor.h"
 
-namespace SlimeVR
-{
-    namespace Sensors
-    {
-        class ErroneousSensor : public Sensor
-        {
+namespace SlimeVR {
+    namespace Sensors {
+        class ErroneousSensor : public Sensor {
         public:
-            ErroneousSensor(uint8_t id, uint8_t type) : Sensor("ErroneousSensor", type, id, 0, 0.0), m_ExpectedType(type){};
-            ~ErroneousSensor(){};
+            ErroneousSensor(uint8_t id, uint8_t type) : Sensor("ErroneousSensor", type, id, 0, 0.0),
+                                                        m_ExpectedType(type) {};
+
+            ~ErroneousSensor() {};
 
             void motionSetup() override;
-            void motionLoop() override final{};
-            void sendData() override{};
-            void startCalibration(int calibrationType) override final{};
+
+            void motionLoop() override final {};
+
+            void sendData() override {};
+
+            void startCalibration(int calibrationType) override final {};
+
             uint8_t getSensorState() override;
 
         private:

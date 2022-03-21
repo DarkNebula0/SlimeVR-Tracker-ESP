@@ -30,7 +30,7 @@ uint8_t Sensor::getSensorState() {
 }
 
 void Sensor::sendData() {
-    if(newData) {
+    if (newData) {
         newData = false;
         Network::sendRotationData(&quaternion, DATA_TYPE_NORMAL, calibrationAccuracy, sensorId);
 
@@ -40,8 +40,8 @@ void Sensor::sendData() {
     }
 }
 
-const char * getIMUNameByType(int imuType) {
-    switch(imuType) {
+const char *getIMUNameByType(int imuType) {
+    switch (imuType) {
         case IMU_MPU9250:
             return "MPU9250";
         case IMU_MPU6500:

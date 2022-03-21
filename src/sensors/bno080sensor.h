@@ -23,16 +23,21 @@
 #include "sensor.h"
 #include <BNO080.h>
 
-class BNO080Sensor : public Sensor
-{
+class BNO080Sensor : public Sensor {
 public:
     BNO080Sensor(uint8_t id, uint8_t type, uint8_t address, float rotation, uint8_t intPin)
-        : Sensor("BNO080Sensor", type, id, address, rotation), m_IntPin(intPin) {};
-    ~BNO080Sensor(){};
+            : Sensor("BNO080Sensor", type, id, address, rotation), m_IntPin(intPin) {};
+
+    ~BNO080Sensor() {};
+
     void motionSetup() override final;
+
     void motionLoop() override final;
+
     void sendData() override final;
+
     void startCalibration(int calibrationType) override final;
+
     uint8_t getSensorState() override final;
 
 private:

@@ -22,6 +22,7 @@
 */
 #ifndef SLIMEVR_DEBUG_H_
 #define SLIMEVR_DEBUG_H_
+
 #include "consts.h"
 #include "logging/Level.h"
 
@@ -57,7 +58,7 @@
 // Sleeping options
 #define POWERSAVING_MODE POWER_SAVING_MINIMUM
 #if POWERSAVING_MODE >= POWER_SAVING_MINIMUM
-    #define TARGET_LOOPTIME_MICROS (samplingRateInMillis * 1000)
+#define TARGET_LOOPTIME_MICROS (samplingRateInMillis * 1000)
 #endif
 
 // Setup for the Magnetometer

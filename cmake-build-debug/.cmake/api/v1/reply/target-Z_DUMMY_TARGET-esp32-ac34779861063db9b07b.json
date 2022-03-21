@@ -1,2819 +1,2793 @@
 {
-	"artifacts" : 
-	[
-		{
-			"path" : "Z_DUMMY_TARGET"
-		}
-	],
-	"backtrace" : 1,
-	"backtraceGraph" : 
-	{
-		"commands" : 
-		[
-			"add_executable",
-			"add_definitions",
-			"include",
-			"include_directories"
-		],
-		"files" : 
-		[
-			"CMakeLists.txt",
-			"CMakeListsPrivate.txt"
-		],
-		"nodes" : 
-		[
-			{
-				"file" : 0
-			},
-			{
-				"command" : 0,
-				"file" : 0,
-				"line" : 33,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 15,
-				"parent" : 0
-			},
-			{
-				"file" : 1,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 32,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 33,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 35,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 26,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 34,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 27,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 28,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 29,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 30,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 31,
-				"parent" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 25,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 37,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 38,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 39,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 40,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 41,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 42,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 43,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 44,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 45,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 46,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 47,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 48,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 49,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 50,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 51,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 52,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 53,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 54,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 55,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 56,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 57,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 58,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 59,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 60,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 61,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 62,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 63,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 64,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 65,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 66,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 67,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 68,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 69,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 70,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 71,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 72,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 73,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 74,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 75,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 76,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 77,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 78,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 79,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 80,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 81,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 82,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 83,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 84,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 85,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 86,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 87,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 88,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 89,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 90,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 91,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 92,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 93,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 94,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 95,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 96,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 97,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 98,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 99,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 100,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 101,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 102,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 103,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 104,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 105,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 106,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 107,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 108,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 109,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 110,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 111,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 112,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 113,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 114,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 115,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 116,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 117,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 118,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 119,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 120,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 121,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 122,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 123,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 124,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 125,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 126,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 127,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 128,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 129,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 130,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 131,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 132,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 133,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 134,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 135,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 136,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 137,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 138,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 139,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 140,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 141,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 142,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 143,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 144,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 145,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 146,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 147,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 148,
-				"parent" : 3
-			}
-		]
-	},
-	"compileGroups" : 
-	[
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-fno-rtti -fno-exceptions -std=gnu++11 -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder"
-				},
-				{
-					"fragment" : "-std=gnu++11"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 4,
-					"define" : "ARDUINO=10805"
-				},
-				{
-					"backtrace" : 5,
-					"define" : "ARDUINO_ARCH_ESP32"
-				},
-				{
-					"backtrace" : 6,
-					"define" : "ARDUINO_BOARD=\"Espressif ESP32 Dev Module\""
-				},
-				{
-					"backtrace" : 7,
-					"define" : "ARDUINO_ESP32_DEV"
-				},
-				{
-					"backtrace" : 8,
-					"define" : "ARDUINO_VARIANT=\"esp32\""
-				},
-				{
-					"backtrace" : 9,
-					"define" : "ESP32"
-				},
-				{
-					"backtrace" : 10,
-					"define" : "ESP_PLATFORM"
-				},
-				{
-					"backtrace" : 11,
-					"define" : "F_CPU=240000000L"
-				},
-				{
-					"backtrace" : 12,
-					"define" : "HAVE_CONFIG_H"
-				},
-				{
-					"backtrace" : 13,
-					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
-				},
-				{
-					"backtrace" : 14,
-					"define" : "PLATFORMIO=50205"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 15,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/include"
-				},
-				{
-					"backtrace" : 16,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/src"
-				},
-				{
-					"backtrace" : 17,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu9250"
-				},
-				{
-					"backtrace" : 18,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"
-				},
-				{
-					"backtrace" : 20,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ICM20948"
-				},
-				{
-					"backtrace" : 21,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno080"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"
-				},
-				{
-					"backtrace" : 23,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno055_adafruit"
-				},
-				{
-					"backtrace" : 24,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bmi160"
-				},
-				{
-					"backtrace" : 25,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/magneto"
-				},
-				{
-					"backtrace" : 26,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/math"
-				},
-				{
-					"backtrace" : 27,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ota"
-				},
-				{
-					"backtrace" : 28,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"
-				},
-				{
-					"backtrace" : 29,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"
-				},
-				{
-					"backtrace" : 30,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"
-				},
-				{
-					"backtrace" : 31,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"
-				},
-				{
-					"backtrace" : 32,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"
-				},
-				{
-					"backtrace" : 33,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cscan"
-				},
-				{
-					"backtrace" : 34,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cdev"
-				},
-				{
-					"backtrace" : 35,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"
-				},
-				{
-					"backtrace" : 36,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/.pio/libdeps/esp32/CmdParser/src"
-				},
-				{
-					"backtrace" : 37,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"
-				},
-				{
-					"backtrace" : 38,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"
-				},
-				{
-					"backtrace" : 39,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"
-				},
-				{
-					"backtrace" : 40,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"
-				},
-				{
-					"backtrace" : 41,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"
-				},
-				{
-					"backtrace" : 42,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"
-				},
-				{
-					"backtrace" : 43,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"
-				},
-				{
-					"backtrace" : 44,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"
-				},
-				{
-					"backtrace" : 45,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"
-				},
-				{
-					"backtrace" : 46,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"
-				},
-				{
-					"backtrace" : 47,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"
-				},
-				{
-					"backtrace" : 48,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"
-				},
-				{
-					"backtrace" : 49,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"
-				},
-				{
-					"backtrace" : 50,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"
-				},
-				{
-					"backtrace" : 51,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"
-				},
-				{
-					"backtrace" : 52,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"
-				},
-				{
-					"backtrace" : 53,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"
-				},
-				{
-					"backtrace" : 54,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"
-				},
-				{
-					"backtrace" : 55,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"
-				},
-				{
-					"backtrace" : 56,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"
-				},
-				{
-					"backtrace" : 57,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"
-				},
-				{
-					"backtrace" : 58,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"
-				},
-				{
-					"backtrace" : 59,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"
-				},
-				{
-					"backtrace" : 60,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"
-				},
-				{
-					"backtrace" : 61,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"
-				},
-				{
-					"backtrace" : 62,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"
-				},
-				{
-					"backtrace" : 63,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"
-				},
-				{
-					"backtrace" : 64,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"
-				},
-				{
-					"backtrace" : 65,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"
-				},
-				{
-					"backtrace" : 66,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"
-				},
-				{
-					"backtrace" : 67,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"
-				},
-				{
-					"backtrace" : 68,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"
-				},
-				{
-					"backtrace" : 69,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"
-				},
-				{
-					"backtrace" : 70,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"
-				},
-				{
-					"backtrace" : 71,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"
-				},
-				{
-					"backtrace" : 72,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"
-				},
-				{
-					"backtrace" : 73,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"
-				},
-				{
-					"backtrace" : 74,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"
-				},
-				{
-					"backtrace" : 75,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"
-				},
-				{
-					"backtrace" : 76,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"
-				},
-				{
-					"backtrace" : 77,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"
-				},
-				{
-					"backtrace" : 78,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"
-				},
-				{
-					"backtrace" : 79,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"
-				},
-				{
-					"backtrace" : 80,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"
-				},
-				{
-					"backtrace" : 81,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"
-				},
-				{
-					"backtrace" : 82,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"
-				},
-				{
-					"backtrace" : 83,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"
-				},
-				{
-					"backtrace" : 84,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"
-				},
-				{
-					"backtrace" : 85,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"
-				},
-				{
-					"backtrace" : 86,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"
-				},
-				{
-					"backtrace" : 87,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"
-				},
-				{
-					"backtrace" : 88,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"
-				},
-				{
-					"backtrace" : 89,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"
-				},
-				{
-					"backtrace" : 90,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"
-				},
-				{
-					"backtrace" : 91,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"
-				},
-				{
-					"backtrace" : 92,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"
-				},
-				{
-					"backtrace" : 93,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"
-				},
-				{
-					"backtrace" : 94,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"
-				},
-				{
-					"backtrace" : 95,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"
-				},
-				{
-					"backtrace" : 96,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"
-				},
-				{
-					"backtrace" : 97,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"
-				},
-				{
-					"backtrace" : 98,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/cores/esp32"
-				},
-				{
-					"backtrace" : 99,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/variants/esp32"
-				},
-				{
-					"backtrace" : 100,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050offsetfinder"
-				},
-				{
-					"backtrace" : 101,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"
-				},
-				{
-					"backtrace" : 102,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"
-				},
-				{
-					"backtrace" : 103,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"
-				},
-				{
-					"backtrace" : 104,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"
-				},
-				{
-					"backtrace" : 105,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"
-				},
-				{
-					"backtrace" : 106,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"
-				},
-				{
-					"backtrace" : 107,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"
-				},
-				{
-					"backtrace" : 108,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"
-				},
-				{
-					"backtrace" : 109,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"
-				},
-				{
-					"backtrace" : 110,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"
-				},
-				{
-					"backtrace" : 111,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"
-				},
-				{
-					"backtrace" : 112,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"
-				},
-				{
-					"backtrace" : 113,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"
-				},
-				{
-					"backtrace" : 114,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"
-				},
-				{
-					"backtrace" : 115,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"
-				},
-				{
-					"backtrace" : 116,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"
-				},
-				{
-					"backtrace" : 117,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"
-				},
-				{
-					"backtrace" : 118,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"
-				},
-				{
-					"backtrace" : 119,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"
-				},
-				{
-					"backtrace" : 120,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"
-				},
-				{
-					"backtrace" : 121,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"
-				},
-				{
-					"backtrace" : 122,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"
-				},
-				{
-					"backtrace" : 123,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"
-				},
-				{
-					"backtrace" : 124,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"
-				},
-				{
-					"backtrace" : 125,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"
-				},
-				{
-					"backtrace" : 126,
-					"path" : "C:/Users/app12/.platformio/packages/tool-unity"
-				}
-			],
-			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "11"
-			},
-			"sourceIndexes" : 
-			[
-				4,
-				19,
-				21,
-				23,
-				25,
-				27,
-				30,
-				32,
-				34,
-				37,
-				39,
-				43,
-				47,
-				48,
-				50,
-				52,
-				54,
-				56,
-				59,
-				66,
-				68,
-				70,
-				72,
-				73,
-				76,
-				78,
-				80,
-				83,
-				85,
-				87,
-				89,
-				91,
-				93,
-				95,
-				97,
-				99,
-				101,
-				104,
-				137,
-				139,
-				141
-			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-std=gnu99 -Wno-old-style-declaration -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder"
-				},
-				{
-					"fragment" : "-std=gnu99"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 4,
-					"define" : "ARDUINO=10805"
-				},
-				{
-					"backtrace" : 5,
-					"define" : "ARDUINO_ARCH_ESP32"
-				},
-				{
-					"backtrace" : 6,
-					"define" : "ARDUINO_BOARD=\"Espressif ESP32 Dev Module\""
-				},
-				{
-					"backtrace" : 7,
-					"define" : "ARDUINO_ESP32_DEV"
-				},
-				{
-					"backtrace" : 8,
-					"define" : "ARDUINO_VARIANT=\"esp32\""
-				},
-				{
-					"backtrace" : 9,
-					"define" : "ESP32"
-				},
-				{
-					"backtrace" : 10,
-					"define" : "ESP_PLATFORM"
-				},
-				{
-					"backtrace" : 11,
-					"define" : "F_CPU=240000000L"
-				},
-				{
-					"backtrace" : 12,
-					"define" : "HAVE_CONFIG_H"
-				},
-				{
-					"backtrace" : 13,
-					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
-				},
-				{
-					"backtrace" : 14,
-					"define" : "PLATFORMIO=50205"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 15,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/include"
-				},
-				{
-					"backtrace" : 16,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/src"
-				},
-				{
-					"backtrace" : 17,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu9250"
-				},
-				{
-					"backtrace" : 18,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"
-				},
-				{
-					"backtrace" : 20,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ICM20948"
-				},
-				{
-					"backtrace" : 21,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno080"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"
-				},
-				{
-					"backtrace" : 23,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno055_adafruit"
-				},
-				{
-					"backtrace" : 24,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bmi160"
-				},
-				{
-					"backtrace" : 25,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/magneto"
-				},
-				{
-					"backtrace" : 26,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/math"
-				},
-				{
-					"backtrace" : 27,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ota"
-				},
-				{
-					"backtrace" : 28,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"
-				},
-				{
-					"backtrace" : 29,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"
-				},
-				{
-					"backtrace" : 30,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"
-				},
-				{
-					"backtrace" : 31,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"
-				},
-				{
-					"backtrace" : 32,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"
-				},
-				{
-					"backtrace" : 33,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cscan"
-				},
-				{
-					"backtrace" : 34,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cdev"
-				},
-				{
-					"backtrace" : 35,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"
-				},
-				{
-					"backtrace" : 36,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/.pio/libdeps/esp32/CmdParser/src"
-				},
-				{
-					"backtrace" : 37,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"
-				},
-				{
-					"backtrace" : 38,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"
-				},
-				{
-					"backtrace" : 39,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"
-				},
-				{
-					"backtrace" : 40,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"
-				},
-				{
-					"backtrace" : 41,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"
-				},
-				{
-					"backtrace" : 42,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"
-				},
-				{
-					"backtrace" : 43,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"
-				},
-				{
-					"backtrace" : 44,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"
-				},
-				{
-					"backtrace" : 45,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"
-				},
-				{
-					"backtrace" : 46,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"
-				},
-				{
-					"backtrace" : 47,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"
-				},
-				{
-					"backtrace" : 48,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"
-				},
-				{
-					"backtrace" : 49,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"
-				},
-				{
-					"backtrace" : 50,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"
-				},
-				{
-					"backtrace" : 51,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"
-				},
-				{
-					"backtrace" : 52,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"
-				},
-				{
-					"backtrace" : 53,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"
-				},
-				{
-					"backtrace" : 54,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"
-				},
-				{
-					"backtrace" : 55,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"
-				},
-				{
-					"backtrace" : 56,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"
-				},
-				{
-					"backtrace" : 57,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"
-				},
-				{
-					"backtrace" : 58,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"
-				},
-				{
-					"backtrace" : 59,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"
-				},
-				{
-					"backtrace" : 60,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"
-				},
-				{
-					"backtrace" : 61,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"
-				},
-				{
-					"backtrace" : 62,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"
-				},
-				{
-					"backtrace" : 63,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"
-				},
-				{
-					"backtrace" : 64,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"
-				},
-				{
-					"backtrace" : 65,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"
-				},
-				{
-					"backtrace" : 66,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"
-				},
-				{
-					"backtrace" : 67,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"
-				},
-				{
-					"backtrace" : 68,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"
-				},
-				{
-					"backtrace" : 69,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"
-				},
-				{
-					"backtrace" : 70,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"
-				},
-				{
-					"backtrace" : 71,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"
-				},
-				{
-					"backtrace" : 72,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"
-				},
-				{
-					"backtrace" : 73,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"
-				},
-				{
-					"backtrace" : 74,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"
-				},
-				{
-					"backtrace" : 75,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"
-				},
-				{
-					"backtrace" : 76,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"
-				},
-				{
-					"backtrace" : 77,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"
-				},
-				{
-					"backtrace" : 78,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"
-				},
-				{
-					"backtrace" : 79,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"
-				},
-				{
-					"backtrace" : 80,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"
-				},
-				{
-					"backtrace" : 81,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"
-				},
-				{
-					"backtrace" : 82,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"
-				},
-				{
-					"backtrace" : 83,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"
-				},
-				{
-					"backtrace" : 84,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"
-				},
-				{
-					"backtrace" : 85,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"
-				},
-				{
-					"backtrace" : 86,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"
-				},
-				{
-					"backtrace" : 87,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"
-				},
-				{
-					"backtrace" : 88,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"
-				},
-				{
-					"backtrace" : 89,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"
-				},
-				{
-					"backtrace" : 90,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"
-				},
-				{
-					"backtrace" : 91,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"
-				},
-				{
-					"backtrace" : 92,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"
-				},
-				{
-					"backtrace" : 93,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"
-				},
-				{
-					"backtrace" : 94,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"
-				},
-				{
-					"backtrace" : 95,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"
-				},
-				{
-					"backtrace" : 96,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"
-				},
-				{
-					"backtrace" : 97,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"
-				},
-				{
-					"backtrace" : 98,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/cores/esp32"
-				},
-				{
-					"backtrace" : 99,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/variants/esp32"
-				},
-				{
-					"backtrace" : 100,
-					"path" : "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050offsetfinder"
-				},
-				{
-					"backtrace" : 101,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"
-				},
-				{
-					"backtrace" : 102,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"
-				},
-				{
-					"backtrace" : 103,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"
-				},
-				{
-					"backtrace" : 104,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"
-				},
-				{
-					"backtrace" : 105,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"
-				},
-				{
-					"backtrace" : 106,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"
-				},
-				{
-					"backtrace" : 107,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"
-				},
-				{
-					"backtrace" : 108,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"
-				},
-				{
-					"backtrace" : 109,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"
-				},
-				{
-					"backtrace" : 110,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"
-				},
-				{
-					"backtrace" : 111,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"
-				},
-				{
-					"backtrace" : 112,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"
-				},
-				{
-					"backtrace" : 113,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"
-				},
-				{
-					"backtrace" : 114,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"
-				},
-				{
-					"backtrace" : 115,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"
-				},
-				{
-					"backtrace" : 116,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"
-				},
-				{
-					"backtrace" : 117,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"
-				},
-				{
-					"backtrace" : 118,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"
-				},
-				{
-					"backtrace" : 119,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"
-				},
-				{
-					"backtrace" : 120,
-					"path" : "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"
-				},
-				{
-					"backtrace" : 121,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"
-				},
-				{
-					"backtrace" : 122,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"
-				},
-				{
-					"backtrace" : 123,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"
-				},
-				{
-					"backtrace" : 124,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"
-				},
-				{
-					"backtrace" : 125,
-					"path" : "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"
-				},
-				{
-					"backtrace" : 126,
-					"path" : "C:/Users/app12/.platformio/packages/tool-unity"
-				}
-			],
-			"language" : "C",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "99"
-			},
-			"sourceIndexes" : 
-			[
-				6
-			]
-		}
-	],
-	"id" : "Z_DUMMY_TARGET::@6890427a1f51a3e7e1df",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-fno-rtti -fno-exceptions -std=gnu++11 -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			}
-		],
-		"language" : "CXX"
-	},
-	"name" : "Z_DUMMY_TARGET",
-	"nameOnDisk" : "Z_DUMMY_TARGET",
-	"paths" : 
-	{
-		"build" : ".",
-		"source" : "."
-	},
-	"sourceGroups" : 
-	[
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				0,
-				1,
-				5,
-				7,
-				8,
-				9,
-				10,
-				14,
-				16,
-				20,
-				22,
-				24,
-				26,
-				28,
-				29,
-				31,
-				33,
-				35,
-				36,
-				38,
-				40,
-				41,
-				42,
-				44,
-				45,
-				46,
-				49,
-				51,
-				53,
-				55,
-				57,
-				58,
-				60,
-				61,
-				62,
-				63,
-				64,
-				65,
-				67,
-				69,
-				71,
-				74,
-				75,
-				77,
-				79,
-				81,
-				82,
-				84,
-				86,
-				88,
-				90,
-				92,
-				94,
-				96,
-				98,
-				100,
-				102,
-				103,
-				138,
-				140,
-				142
-			]
-		},
-		{
-			"name" : "",
-			"sourceIndexes" : 
-			[
-				2,
-				3,
-				11,
-				12,
-				13,
-				15,
-				17,
-				18,
-				105,
-				106,
-				107,
-				108,
-				109,
-				110,
-				111,
-				112,
-				113,
-				114,
-				115,
-				116,
-				117,
-				118,
-				119,
-				120,
-				121,
-				122,
-				123,
-				124,
-				125,
-				126,
-				127,
-				128,
-				129,
-				130,
-				131,
-				132,
-				133,
-				134,
-				135,
-				136
-			]
-		},
-		{
-			"name" : "Source Files",
-			"sourceIndexes" : 
-			[
-				4,
-				6,
-				19,
-				21,
-				23,
-				25,
-				27,
-				30,
-				32,
-				34,
-				37,
-				39,
-				43,
-				47,
-				48,
-				50,
-				52,
-				54,
-				56,
-				59,
-				66,
-				68,
-				70,
-				72,
-				73,
-				76,
-				78,
-				80,
-				83,
-				85,
-				87,
-				89,
-				91,
-				93,
-				95,
-				97,
-				99,
-				101,
-				104,
-				137,
-				139,
-				141
-			]
-		}
-	],
-	"sources" : 
-	[
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/AK09916_ENUMERATIONS.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/AK09916_REGISTERS.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/DMP.md",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM20948_eMD_nucleo_1.0/icm20948_img.dmp3a.h_14290",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/ICM20948/ICM_20948.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM_20948.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "lib/ICM20948/ICM_20948_C.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM_20948_C.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM_20948_DMP.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM_20948_ENUMERATIONS.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ICM_20948_REGISTERS.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/ISSUE_TEMPLATE.md",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/License.md",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/README.md",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/arduino-timer.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/eMD-SmartMotion-ICM20948-1.1.0-MP/icm20948_img.dmp3a.h_14301",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/icm20948_img.dmp3a.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/keywords.txt",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ICM20948/library.properties",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/bmi160/BMI160.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/bmi160/BMI160.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/bno055_adafruit/Adafruit_BNO055.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/bno055_adafruit/Adafruit_BNO055.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/bno080/BNO080.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/bno080/BNO080.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/i2cdev/I2Cdev.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/i2cdev/I2Cdev.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/i2cscan/i2cscan.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/i2cscan/i2cscan.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/magneto/dmpmag.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/magneto/madgwick.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/magneto/madgwick.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/magneto/magneto1.4.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/magneto/magneto1.4.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/magneto/mahony.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/magneto/mahony.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/math/basis.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/math/helper_3dmath.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/math/helper_3dmath.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/math/quat.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/math/quat.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/math/shared.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/math/vector3.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/mpu6050/MPU6050.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu6050/MPU6050.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu6050/MPU6050_6Axis_MotionApps20.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu6050/MPU6050_6Axis_MotionApps_V6_12.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/mpu6050offsetfinder/MPU6050OffsetFinder.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/mpu9250/MPU9250.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu9250/MPU9250.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/mpu9250/MPU9250MotionApps.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu9250/MPU9250MotionApps.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/mpu9250/MPU9250_6Axis_MotionApps_V6_12.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/mpu9250/MPU9250_6Axis_MotionApps_V6_12.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/ota/ota.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/ota/ota.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/batterymonitor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/batterymonitor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/calibration.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/configuration.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/configuration.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/consts.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/credentials.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/debug.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/defines.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/globals.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/ledmgr.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/ledmgr.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/logging/Level.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/logging/Level.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/logging/Logger.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/logging/Logger.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/main.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/network/network.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/network/network.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/network/packets.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/network/udpclient.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/network/udpclient.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/network/wifihandler.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/network/wifihandler.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/network/wifiprovisioning.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/network/wifiprovisioning.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/EmptySensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/ErroneousSensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/ErroneousSensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/SensorManager.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/SensorManager.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/bmi160sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/bmi160sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/bno055sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/bno055sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/bno080sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/bno080sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/icm20948sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/icm20948sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/mpu6050sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/mpu6050sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/mpu9250sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/mpu9250sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/sensors/sensor.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/sensors/sensor.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/serial/serialcommands.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/serial/serialcommands.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/utils.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "test/i2cscan.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.clang-format",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/.piopm",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/applypatch-msg.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/commit-msg.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/fsmonitor-watchman.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/post-update.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-applypatch.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-commit.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-merge-commit.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-push.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-rebase.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-receive.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/prepare-commit-msg.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/push-to-checkout.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/hooks/update.sample",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/objects/pack/pack-862df38b7a9fc0afc4f2da3e1853b32e2593adc2.idx",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/objects/pack/pack-862df38b7a9fc0afc4f2da3e1853b32e2593adc2.pack",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.git/refs/tags/1.6",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.github/release-drafter.yml",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.github/stale.yml",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/.gitignore",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/README.md",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/azure-pipelines.yml",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Buffer/Buffer.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Callback/Callback.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Callback_P/Callback_P.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Callback_non_blocking/Callback_non_blocking.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Parser-KeyValue/Parser-KeyValue.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/examples/Parser/Parser.ino",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/keywords.txt",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/library.json",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/library.properties",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdBuffer.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdBuffer.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdCallback.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdCallback.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdParser.cpp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : ".pio/libdeps/esp32/CmdParser/src/CmdParser.hpp",
-			"sourceGroupIndex" : 0
-		}
-	],
-	"type" : "EXECUTABLE"
+  "artifacts": [
+    {
+      "path": "Z_DUMMY_TARGET"
+    }
+  ],
+  "backtrace": 1,
+  "backtraceGraph": {
+    "commands": [
+      "add_executable",
+      "add_definitions",
+      "include",
+      "include_directories"
+    ],
+    "files": [
+      "CMakeLists.txt",
+      "CMakeListsPrivate.txt"
+    ],
+    "nodes": [
+      {
+        "file": 0
+      },
+      {
+        "command": 0,
+        "file": 0,
+        "line": 33,
+        "parent": 0
+      },
+      {
+        "command": 2,
+        "file": 0,
+        "line": 15,
+        "parent": 0
+      },
+      {
+        "file": 1,
+        "parent": 2
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 32,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 33,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 35,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 26,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 34,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 27,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 28,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 29,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 30,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 31,
+        "parent": 3
+      },
+      {
+        "command": 1,
+        "file": 1,
+        "line": 25,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 37,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 38,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 39,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 40,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 41,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 42,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 43,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 44,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 45,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 46,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 47,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 48,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 49,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 50,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 51,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 52,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 53,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 54,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 55,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 56,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 57,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 58,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 59,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 60,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 61,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 62,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 63,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 64,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 65,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 66,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 67,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 68,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 69,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 70,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 71,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 72,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 73,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 74,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 75,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 76,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 77,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 78,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 79,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 80,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 81,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 82,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 83,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 84,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 85,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 86,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 87,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 88,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 89,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 90,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 91,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 92,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 93,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 94,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 95,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 96,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 97,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 98,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 99,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 100,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 101,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 102,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 103,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 104,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 105,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 106,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 107,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 108,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 109,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 110,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 111,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 112,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 113,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 114,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 115,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 116,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 117,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 118,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 119,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 120,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 121,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 122,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 123,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 124,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 125,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 126,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 127,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 128,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 129,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 130,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 131,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 132,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 133,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 134,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 135,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 136,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 137,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 138,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 139,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 140,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 141,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 142,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 143,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 144,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 145,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 146,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 147,
+        "parent": 3
+      },
+      {
+        "command": 3,
+        "file": 1,
+        "line": 148,
+        "parent": 3
+      }
+    ]
+  },
+  "compileGroups": [
+    {
+      "compileCommandFragments": [
+        {
+          "fragment": "-fno-rtti -fno-exceptions -std=gnu++11 -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder"
+        },
+        {
+          "fragment": "-std=gnu++11"
+        }
+      ],
+      "defines": [
+        {
+          "backtrace": 4,
+          "define": "ARDUINO=10805"
+        },
+        {
+          "backtrace": 5,
+          "define": "ARDUINO_ARCH_ESP32"
+        },
+        {
+          "backtrace": 6,
+          "define": "ARDUINO_BOARD=\"Espressif ESP32 Dev Module\""
+        },
+        {
+          "backtrace": 7,
+          "define": "ARDUINO_ESP32_DEV"
+        },
+        {
+          "backtrace": 8,
+          "define": "ARDUINO_VARIANT=\"esp32\""
+        },
+        {
+          "backtrace": 9,
+          "define": "ESP32"
+        },
+        {
+          "backtrace": 10,
+          "define": "ESP_PLATFORM"
+        },
+        {
+          "backtrace": 11,
+          "define": "F_CPU=240000000L"
+        },
+        {
+          "backtrace": 12,
+          "define": "HAVE_CONFIG_H"
+        },
+        {
+          "backtrace": 13,
+          "define": "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
+        },
+        {
+          "backtrace": 14,
+          "define": "PLATFORMIO=50205"
+        }
+      ],
+      "includes": [
+        {
+          "backtrace": 15,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/include"
+        },
+        {
+          "backtrace": 16,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/src"
+        },
+        {
+          "backtrace": 17,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu9250"
+        },
+        {
+          "backtrace": 18,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050"
+        },
+        {
+          "backtrace": 19,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"
+        },
+        {
+          "backtrace": 20,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ICM20948"
+        },
+        {
+          "backtrace": 21,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno080"
+        },
+        {
+          "backtrace": 22,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"
+        },
+        {
+          "backtrace": 23,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno055_adafruit"
+        },
+        {
+          "backtrace": 24,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bmi160"
+        },
+        {
+          "backtrace": 25,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/magneto"
+        },
+        {
+          "backtrace": 26,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/math"
+        },
+        {
+          "backtrace": 27,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ota"
+        },
+        {
+          "backtrace": 28,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"
+        },
+        {
+          "backtrace": 29,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"
+        },
+        {
+          "backtrace": 30,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"
+        },
+        {
+          "backtrace": 31,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"
+        },
+        {
+          "backtrace": 32,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"
+        },
+        {
+          "backtrace": 33,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cscan"
+        },
+        {
+          "backtrace": 34,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cdev"
+        },
+        {
+          "backtrace": 35,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"
+        },
+        {
+          "backtrace": 36,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/.pio/libdeps/esp32/CmdParser/src"
+        },
+        {
+          "backtrace": 37,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"
+        },
+        {
+          "backtrace": 38,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"
+        },
+        {
+          "backtrace": 39,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"
+        },
+        {
+          "backtrace": 40,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"
+        },
+        {
+          "backtrace": 41,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"
+        },
+        {
+          "backtrace": 42,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"
+        },
+        {
+          "backtrace": 43,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"
+        },
+        {
+          "backtrace": 44,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"
+        },
+        {
+          "backtrace": 45,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"
+        },
+        {
+          "backtrace": 46,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"
+        },
+        {
+          "backtrace": 47,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"
+        },
+        {
+          "backtrace": 48,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"
+        },
+        {
+          "backtrace": 49,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"
+        },
+        {
+          "backtrace": 50,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"
+        },
+        {
+          "backtrace": 51,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"
+        },
+        {
+          "backtrace": 52,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"
+        },
+        {
+          "backtrace": 53,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"
+        },
+        {
+          "backtrace": 54,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"
+        },
+        {
+          "backtrace": 55,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"
+        },
+        {
+          "backtrace": 56,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"
+        },
+        {
+          "backtrace": 57,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"
+        },
+        {
+          "backtrace": 58,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"
+        },
+        {
+          "backtrace": 59,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"
+        },
+        {
+          "backtrace": 60,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"
+        },
+        {
+          "backtrace": 61,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"
+        },
+        {
+          "backtrace": 62,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"
+        },
+        {
+          "backtrace": 63,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"
+        },
+        {
+          "backtrace": 64,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"
+        },
+        {
+          "backtrace": 65,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"
+        },
+        {
+          "backtrace": 66,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"
+        },
+        {
+          "backtrace": 67,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"
+        },
+        {
+          "backtrace": 68,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"
+        },
+        {
+          "backtrace": 69,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"
+        },
+        {
+          "backtrace": 70,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"
+        },
+        {
+          "backtrace": 71,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"
+        },
+        {
+          "backtrace": 72,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"
+        },
+        {
+          "backtrace": 73,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"
+        },
+        {
+          "backtrace": 74,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"
+        },
+        {
+          "backtrace": 75,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"
+        },
+        {
+          "backtrace": 76,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"
+        },
+        {
+          "backtrace": 77,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"
+        },
+        {
+          "backtrace": 78,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"
+        },
+        {
+          "backtrace": 79,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"
+        },
+        {
+          "backtrace": 80,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"
+        },
+        {
+          "backtrace": 81,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"
+        },
+        {
+          "backtrace": 82,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"
+        },
+        {
+          "backtrace": 83,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"
+        },
+        {
+          "backtrace": 84,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"
+        },
+        {
+          "backtrace": 85,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"
+        },
+        {
+          "backtrace": 86,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"
+        },
+        {
+          "backtrace": 87,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"
+        },
+        {
+          "backtrace": 88,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"
+        },
+        {
+          "backtrace": 89,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"
+        },
+        {
+          "backtrace": 90,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"
+        },
+        {
+          "backtrace": 91,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"
+        },
+        {
+          "backtrace": 92,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"
+        },
+        {
+          "backtrace": 93,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"
+        },
+        {
+          "backtrace": 94,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"
+        },
+        {
+          "backtrace": 95,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"
+        },
+        {
+          "backtrace": 96,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"
+        },
+        {
+          "backtrace": 97,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"
+        },
+        {
+          "backtrace": 98,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/cores/esp32"
+        },
+        {
+          "backtrace": 99,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/variants/esp32"
+        },
+        {
+          "backtrace": 100,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050offsetfinder"
+        },
+        {
+          "backtrace": 101,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"
+        },
+        {
+          "backtrace": 102,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"
+        },
+        {
+          "backtrace": 103,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"
+        },
+        {
+          "backtrace": 104,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"
+        },
+        {
+          "backtrace": 105,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"
+        },
+        {
+          "backtrace": 106,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"
+        },
+        {
+          "backtrace": 107,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"
+        },
+        {
+          "backtrace": 108,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"
+        },
+        {
+          "backtrace": 109,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"
+        },
+        {
+          "backtrace": 110,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"
+        },
+        {
+          "backtrace": 111,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"
+        },
+        {
+          "backtrace": 112,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"
+        },
+        {
+          "backtrace": 113,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"
+        },
+        {
+          "backtrace": 114,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"
+        },
+        {
+          "backtrace": 115,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"
+        },
+        {
+          "backtrace": 116,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"
+        },
+        {
+          "backtrace": 117,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"
+        },
+        {
+          "backtrace": 118,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"
+        },
+        {
+          "backtrace": 119,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"
+        },
+        {
+          "backtrace": 120,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"
+        },
+        {
+          "backtrace": 121,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"
+        },
+        {
+          "backtrace": 122,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"
+        },
+        {
+          "backtrace": 123,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"
+        },
+        {
+          "backtrace": 124,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"
+        },
+        {
+          "backtrace": 125,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"
+        },
+        {
+          "backtrace": 126,
+          "path": "C:/Users/app12/.platformio/packages/tool-unity"
+        }
+      ],
+      "language": "CXX",
+      "languageStandard": {
+        "backtraces": [
+          1
+        ],
+        "standard": "11"
+      },
+      "sourceIndexes": [
+        4,
+        19,
+        21,
+        23,
+        25,
+        27,
+        30,
+        32,
+        34,
+        37,
+        39,
+        43,
+        47,
+        48,
+        50,
+        52,
+        54,
+        56,
+        59,
+        66,
+        68,
+        70,
+        72,
+        73,
+        76,
+        78,
+        80,
+        83,
+        85,
+        87,
+        89,
+        91,
+        93,
+        95,
+        97,
+        99,
+        101,
+        104,
+        137,
+        139,
+        141
+      ]
+    },
+    {
+      "compileCommandFragments": [
+        {
+          "fragment": "-std=gnu99 -Wno-old-style-declaration -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder"
+        },
+        {
+          "fragment": "-std=gnu99"
+        }
+      ],
+      "defines": [
+        {
+          "backtrace": 4,
+          "define": "ARDUINO=10805"
+        },
+        {
+          "backtrace": 5,
+          "define": "ARDUINO_ARCH_ESP32"
+        },
+        {
+          "backtrace": 6,
+          "define": "ARDUINO_BOARD=\"Espressif ESP32 Dev Module\""
+        },
+        {
+          "backtrace": 7,
+          "define": "ARDUINO_ESP32_DEV"
+        },
+        {
+          "backtrace": 8,
+          "define": "ARDUINO_VARIANT=\"esp32\""
+        },
+        {
+          "backtrace": 9,
+          "define": "ESP32"
+        },
+        {
+          "backtrace": 10,
+          "define": "ESP_PLATFORM"
+        },
+        {
+          "backtrace": 11,
+          "define": "F_CPU=240000000L"
+        },
+        {
+          "backtrace": 12,
+          "define": "HAVE_CONFIG_H"
+        },
+        {
+          "backtrace": 13,
+          "define": "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
+        },
+        {
+          "backtrace": 14,
+          "define": "PLATFORMIO=50205"
+        }
+      ],
+      "includes": [
+        {
+          "backtrace": 15,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/include"
+        },
+        {
+          "backtrace": 16,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/src"
+        },
+        {
+          "backtrace": 17,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu9250"
+        },
+        {
+          "backtrace": 18,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050"
+        },
+        {
+          "backtrace": 19,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"
+        },
+        {
+          "backtrace": 20,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ICM20948"
+        },
+        {
+          "backtrace": 21,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno080"
+        },
+        {
+          "backtrace": 22,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"
+        },
+        {
+          "backtrace": 23,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bno055_adafruit"
+        },
+        {
+          "backtrace": 24,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/bmi160"
+        },
+        {
+          "backtrace": 25,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/magneto"
+        },
+        {
+          "backtrace": 26,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/math"
+        },
+        {
+          "backtrace": 27,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/ota"
+        },
+        {
+          "backtrace": 28,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"
+        },
+        {
+          "backtrace": 29,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"
+        },
+        {
+          "backtrace": 30,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"
+        },
+        {
+          "backtrace": 31,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"
+        },
+        {
+          "backtrace": 32,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"
+        },
+        {
+          "backtrace": 33,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cscan"
+        },
+        {
+          "backtrace": 34,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/i2cdev"
+        },
+        {
+          "backtrace": 35,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"
+        },
+        {
+          "backtrace": 36,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/.pio/libdeps/esp32/CmdParser/src"
+        },
+        {
+          "backtrace": 37,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"
+        },
+        {
+          "backtrace": 38,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"
+        },
+        {
+          "backtrace": 39,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"
+        },
+        {
+          "backtrace": 40,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"
+        },
+        {
+          "backtrace": 41,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"
+        },
+        {
+          "backtrace": 42,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"
+        },
+        {
+          "backtrace": 43,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"
+        },
+        {
+          "backtrace": 44,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"
+        },
+        {
+          "backtrace": 45,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"
+        },
+        {
+          "backtrace": 46,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"
+        },
+        {
+          "backtrace": 47,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"
+        },
+        {
+          "backtrace": 48,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"
+        },
+        {
+          "backtrace": 49,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"
+        },
+        {
+          "backtrace": 50,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"
+        },
+        {
+          "backtrace": 51,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"
+        },
+        {
+          "backtrace": 52,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"
+        },
+        {
+          "backtrace": 53,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"
+        },
+        {
+          "backtrace": 54,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"
+        },
+        {
+          "backtrace": 55,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"
+        },
+        {
+          "backtrace": 56,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"
+        },
+        {
+          "backtrace": 57,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"
+        },
+        {
+          "backtrace": 58,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"
+        },
+        {
+          "backtrace": 59,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"
+        },
+        {
+          "backtrace": 60,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"
+        },
+        {
+          "backtrace": 61,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"
+        },
+        {
+          "backtrace": 62,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"
+        },
+        {
+          "backtrace": 63,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"
+        },
+        {
+          "backtrace": 64,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"
+        },
+        {
+          "backtrace": 65,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"
+        },
+        {
+          "backtrace": 66,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"
+        },
+        {
+          "backtrace": 67,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"
+        },
+        {
+          "backtrace": 68,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"
+        },
+        {
+          "backtrace": 69,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"
+        },
+        {
+          "backtrace": 70,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"
+        },
+        {
+          "backtrace": 71,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"
+        },
+        {
+          "backtrace": 72,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"
+        },
+        {
+          "backtrace": 73,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"
+        },
+        {
+          "backtrace": 74,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"
+        },
+        {
+          "backtrace": 75,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"
+        },
+        {
+          "backtrace": 76,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"
+        },
+        {
+          "backtrace": 77,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"
+        },
+        {
+          "backtrace": 78,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"
+        },
+        {
+          "backtrace": 79,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"
+        },
+        {
+          "backtrace": 80,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"
+        },
+        {
+          "backtrace": 81,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"
+        },
+        {
+          "backtrace": 82,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"
+        },
+        {
+          "backtrace": 83,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"
+        },
+        {
+          "backtrace": 84,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"
+        },
+        {
+          "backtrace": 85,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"
+        },
+        {
+          "backtrace": 86,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"
+        },
+        {
+          "backtrace": 87,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"
+        },
+        {
+          "backtrace": 88,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"
+        },
+        {
+          "backtrace": 89,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"
+        },
+        {
+          "backtrace": 90,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"
+        },
+        {
+          "backtrace": 91,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"
+        },
+        {
+          "backtrace": 92,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"
+        },
+        {
+          "backtrace": 93,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"
+        },
+        {
+          "backtrace": 94,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"
+        },
+        {
+          "backtrace": 95,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"
+        },
+        {
+          "backtrace": 96,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"
+        },
+        {
+          "backtrace": 97,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"
+        },
+        {
+          "backtrace": 98,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/cores/esp32"
+        },
+        {
+          "backtrace": 99,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/variants/esp32"
+        },
+        {
+          "backtrace": 100,
+          "path": "C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/lib/mpu6050offsetfinder"
+        },
+        {
+          "backtrace": 101,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"
+        },
+        {
+          "backtrace": 102,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"
+        },
+        {
+          "backtrace": 103,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"
+        },
+        {
+          "backtrace": 104,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"
+        },
+        {
+          "backtrace": 105,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"
+        },
+        {
+          "backtrace": 106,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"
+        },
+        {
+          "backtrace": 107,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"
+        },
+        {
+          "backtrace": 108,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"
+        },
+        {
+          "backtrace": 109,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"
+        },
+        {
+          "backtrace": 110,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"
+        },
+        {
+          "backtrace": 111,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"
+        },
+        {
+          "backtrace": 112,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"
+        },
+        {
+          "backtrace": 113,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"
+        },
+        {
+          "backtrace": 114,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"
+        },
+        {
+          "backtrace": 115,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"
+        },
+        {
+          "backtrace": 116,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"
+        },
+        {
+          "backtrace": 117,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"
+        },
+        {
+          "backtrace": 118,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"
+        },
+        {
+          "backtrace": 119,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"
+        },
+        {
+          "backtrace": 120,
+          "path": "C:/Users/app12/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"
+        },
+        {
+          "backtrace": 121,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"
+        },
+        {
+          "backtrace": 122,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"
+        },
+        {
+          "backtrace": 123,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"
+        },
+        {
+          "backtrace": 124,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"
+        },
+        {
+          "backtrace": 125,
+          "path": "C:/Users/app12/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"
+        },
+        {
+          "backtrace": 126,
+          "path": "C:/Users/app12/.platformio/packages/tool-unity"
+        }
+      ],
+      "language": "C",
+      "languageStandard": {
+        "backtraces": [
+          1
+        ],
+        "standard": "99"
+      },
+      "sourceIndexes": [
+        6
+      ]
+    }
+  ],
+  "id": "Z_DUMMY_TARGET::@6890427a1f51a3e7e1df",
+  "link": {
+    "commandFragments": [
+      {
+        "fragment": "-fno-rtti -fno-exceptions -std=gnu++11 -O2 -g3 -Wall -nostdlib -Wpointer-arith -Wno-error=unused-but-set-variable -Wno-error=unused-variable -mlongcalls -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-unused-parameter -Wno-sign-compare -fstack-protector -fexceptions -Werror=reorder",
+        "role": "flags"
+      },
+      {
+        "fragment": "",
+        "role": "flags"
+      }
+    ],
+    "language": "CXX"
+  },
+  "name": "Z_DUMMY_TARGET",
+  "nameOnDisk": "Z_DUMMY_TARGET",
+  "paths": {
+    "build": ".",
+    "source": "."
+  },
+  "sourceGroups": [
+    {
+      "name": "Header Files",
+      "sourceIndexes": [
+        0,
+        1,
+        5,
+        7,
+        8,
+        9,
+        10,
+        14,
+        16,
+        20,
+        22,
+        24,
+        26,
+        28,
+        29,
+        31,
+        33,
+        35,
+        36,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        49,
+        51,
+        53,
+        55,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        67,
+        69,
+        71,
+        74,
+        75,
+        77,
+        79,
+        81,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100,
+        102,
+        103,
+        138,
+        140,
+        142
+      ]
+    },
+    {
+      "name": "",
+      "sourceIndexes": [
+        2,
+        3,
+        11,
+        12,
+        13,
+        15,
+        17,
+        18,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136
+      ]
+    },
+    {
+      "name": "Source Files",
+      "sourceIndexes": [
+        4,
+        6,
+        19,
+        21,
+        23,
+        25,
+        27,
+        30,
+        32,
+        34,
+        37,
+        39,
+        43,
+        47,
+        48,
+        50,
+        52,
+        54,
+        56,
+        59,
+        66,
+        68,
+        70,
+        72,
+        73,
+        76,
+        78,
+        80,
+        83,
+        85,
+        87,
+        89,
+        91,
+        93,
+        95,
+        97,
+        99,
+        101,
+        104,
+        137,
+        139,
+        141
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/AK09916_ENUMERATIONS.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/AK09916_REGISTERS.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/DMP.md",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM20948_eMD_nucleo_1.0/icm20948_img.dmp3a.h_14290",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/ICM20948/ICM_20948.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM_20948.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 1,
+      "path": "lib/ICM20948/ICM_20948_C.c",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM_20948_C.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM_20948_DMP.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM_20948_ENUMERATIONS.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ICM_20948_REGISTERS.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/ISSUE_TEMPLATE.md",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/License.md",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/README.md",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/arduino-timer.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/eMD-SmartMotion-ICM20948-1.1.0-MP/icm20948_img.dmp3a.h_14301",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/icm20948_img.dmp3a.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/keywords.txt",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ICM20948/library.properties",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/bmi160/BMI160.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/bmi160/BMI160.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/bno055_adafruit/Adafruit_BNO055.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/bno055_adafruit/Adafruit_BNO055.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/bno080/BNO080.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/bno080/BNO080.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/i2cdev/I2Cdev.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/i2cdev/I2Cdev.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/i2cscan/i2cscan.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/i2cscan/i2cscan.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/magneto/dmpmag.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/magneto/madgwick.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/magneto/madgwick.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/magneto/magneto1.4.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/magneto/magneto1.4.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/magneto/mahony.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/magneto/mahony.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/math/basis.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/math/helper_3dmath.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/math/helper_3dmath.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/math/quat.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/math/quat.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/math/shared.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/math/vector3.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/mpu6050/MPU6050.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu6050/MPU6050.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu6050/MPU6050_6Axis_MotionApps20.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu6050/MPU6050_6Axis_MotionApps_V6_12.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/mpu6050offsetfinder/MPU6050OffsetFinder.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/mpu9250/MPU9250.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu9250/MPU9250.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/mpu9250/MPU9250MotionApps.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu9250/MPU9250MotionApps.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/mpu9250/MPU9250_6Axis_MotionApps_V6_12.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/mpu9250/MPU9250_6Axis_MotionApps_V6_12.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "lib/ota/ota.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "lib/ota/ota.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/batterymonitor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/batterymonitor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/calibration.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/configuration.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/configuration.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/consts.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/credentials.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/debug.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/defines.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/globals.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/ledmgr.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/ledmgr.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/logging/Level.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/logging/Level.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/logging/Logger.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/logging/Logger.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/main.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/network/network.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/network/network.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/network/packets.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/network/udpclient.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/network/udpclient.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/network/wifihandler.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/network/wifihandler.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/network/wifiprovisioning.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/network/wifiprovisioning.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/EmptySensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/ErroneousSensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/ErroneousSensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/SensorManager.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/SensorManager.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/bmi160sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/bmi160sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/bno055sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/bno055sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/bno080sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/bno080sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/icm20948sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/icm20948sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/mpu6050sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/mpu6050sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/mpu9250sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/mpu9250sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/sensors/sensor.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/sensors/sensor.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "src/serial/serialcommands.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": "src/serial/serialcommands.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "path": "src/utils.h",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": "test/i2cscan.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.clang-format",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/.piopm",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/applypatch-msg.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/commit-msg.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/fsmonitor-watchman.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/post-update.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-applypatch.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-commit.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-merge-commit.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-push.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-rebase.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/pre-receive.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/prepare-commit-msg.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/push-to-checkout.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/hooks/update.sample",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/objects/pack/pack-862df38b7a9fc0afc4f2da3e1853b32e2593adc2.idx",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/objects/pack/pack-862df38b7a9fc0afc4f2da3e1853b32e2593adc2.pack",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.git/refs/tags/1.6",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.github/release-drafter.yml",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.github/stale.yml",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/.gitignore",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/README.md",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/azure-pipelines.yml",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Buffer/Buffer.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Callback/Callback.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Callback_P/Callback_P.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Callback_non_blocking/Callback_non_blocking.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Parser-KeyValue/Parser-KeyValue.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/examples/Parser/Parser.ino",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/keywords.txt",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/library.json",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/library.properties",
+      "sourceGroupIndex": 1
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdBuffer.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdBuffer.hpp",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdCallback.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdCallback.hpp",
+      "sourceGroupIndex": 0
+    },
+    {
+      "backtrace": 1,
+      "compileGroupIndex": 0,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdParser.cpp",
+      "sourceGroupIndex": 2
+    },
+    {
+      "backtrace": 1,
+      "path": ".pio/libdeps/esp32/CmdParser/src/CmdParser.hpp",
+      "sourceGroupIndex": 0
+    }
+  ],
+  "type": "EXECUTABLE"
 }

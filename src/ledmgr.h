@@ -51,17 +51,25 @@
 #define SERVER_CONNECTING_COUNT 2
 
 namespace LEDManager {
-    
+
     enum Stage {
         OFF, ON, GAP, INTERVAL
     };
+
     void on(uint8_t pin);
+
     void off(uint8_t pin);
+
     void blink(uint8_t pin, unsigned long time, uint8_t direction = LOW);
+
     void pattern(uint8_t pin, unsigned long timeon, unsigned long timeoff, int times, uint8_t direction = LOW);
+
     void signalAssert();
+
     void setLedStatus(uint32_t status);
+
     void unsetLedStatus(uint32_t status);
+
     void ledStatusUpdate();
 }
 

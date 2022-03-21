@@ -2,40 +2,51 @@
 
 ## What is the Digital Motion Processor (DMP™)?
 
-In version 1.2 of this library, we added _partial_ support for the InvenSense Digital Motion Processor (DMP™). The DMP is firmware which runs on the
-ICM-20948 and which "offloads computation of motion processing algorithms from the host processor, improving system power performance".
+In version 1.2 of this library, we added _partial_ support for the InvenSense Digital Motion Processor (DMP™). The DMP
+is firmware which runs on the ICM-20948 and which "offloads computation of motion processing algorithms from the host
+processor, improving system power performance".
 
-"The DMP enables ultra-low power run-time and background calibration of the accelerometer, gyroscope, and compass, maintaining optimal performance of
-the sensor data for both physical and virtual sensors generated through sensor fusion."
+"The DMP enables ultra-low power run-time and background calibration of the accelerometer, gyroscope, and compass,
+maintaining optimal performance of the sensor data for both physical and virtual sensors generated through sensor
+fusion."
 
-The DMP allows the accelerometer, gyro and magnetometer data to be combined (fused) so that Quaternion data can be produced.
+The DMP allows the accelerometer, gyro and magnetometer data to be combined (fused) so that Quaternion data can be
+produced.
 
-The DMP firmware binary has been available for quite some time. It is included in InvenSense's "MotionLink" and "Embedded Motion Driver (eMD)" examples
-which can be downloaded from the InvenSense Developers Corner. However, the code is opaque and difficult to follow.
+The DMP firmware binary has been available for quite some time. It is included in InvenSense's "MotionLink" and "
+Embedded Motion Driver (eMD)" examples which can be downloaded from the InvenSense Developers Corner. However, the code
+is opaque and difficult to follow.
 
-Users like [@ericalbers](https://github.com/ericalbers/ICM20948_DMP_Arduino) and [@ZaneL](https://github.com/ZaneL/Teensy-ICM-20948) have ported the
-InvenSense example code to the Arduino environment previously. We are grateful to Eric and Zane as their code allowed us to reverse-engineer some of the
+Users like [@ericalbers](https://github.com/ericalbers/ICM20948_DMP_Arduino)
+and [@ZaneL](https://github.com/ZaneL/Teensy-ICM-20948) have ported the InvenSense example code to the Arduino
+environment previously. We are grateful to Eric and Zane as their code allowed us to reverse-engineer some of the
 ICM-20948 configuration steps.
 
-We are also grateful to InvenSense themselves for sharing with us a _confidential & proprietary_ document called "_Application Note: Programming Sequence for
-ICM-20648 DMP Hardware Function_". InvenSense admit that the document is not complete and have asked us not to share it openly.
+We are also grateful to InvenSense themselves for sharing with us a _confidential & proprietary_ document called "_
+Application Note: Programming Sequence for ICM-20648 DMP Hardware Function_". InvenSense admit that the document is not
+complete and have asked us not to share it openly.
 
-The InvenSense document and the bus traffic we captured using Zane's port have allowed us to add _partial_ support for the DMP to this library, using our
-own functions. We say _partial_ because, at the time of writing, our library does not support: activity recognition, step counting, pick-up and tap-detection.
-It does however support:
+The InvenSense document and the bus traffic we captured using Zane's port have allowed us to add _partial_ support for
+the DMP to this library, using our own functions. We say _partial_ because, at the time of writing, our library does not
+support: activity recognition, step counting, pick-up and tap-detection. It does however support:
+
 - Raw and calibrated accelerometer, gyro and compass data and accuracy
 - 6-axis and 9-axis Quaternion data (including Game Rotation Vector data)
 - Geomagnetic Rotation Vector data
 - and [more...](#which-dmp-features-are-currently-supported)
 
-We have added [five new examples](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/tree/master/examples/Arduino) to show how to configure the DMP and read:
+We have
+added [five new examples](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/tree/master/examples/Arduino) to
+show how to configure the DMP and read:
 9-axis Quaternion data; 6-axis Quaternion converted to Euler angles (roll, pitch & yaw); raw accelerometer data.
 
 ## Is DMP support enabled by default?
 
-No. The DMP occupies 14kBytes of program memory and so, to allow the library to continue to run on processors with limited memory, DMP support is disabled by default.
+No. The DMP occupies 14kBytes of program memory and so, to allow the library to continue to run on processors with
+limited memory, DMP support is disabled by default.
 
-You can enable it by editing the file called ```ICM_20948_C.h``` and uncommenting [line 29](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/src/util/ICM_20948_C.h#L29):
+You can enable it by editing the file called ```ICM_20948_C.h``` and
+uncommenting [line 29](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/src/util/ICM_20948_C.h#L29):
 
 Change:
 
@@ -49,41 +60,57 @@ to:
 #define ICM_20948_USE_DMP
 ```
 
-You will find ```ICM_20948_C.h``` in the library _src\util_ folder. If you are using Windows, you will find it in _Documents\Arduino\libraries\SparkFun_ICM-20948_ArduinoLibrary\src\util_.
+You will find ```ICM_20948_C.h``` in the library _src\util_ folder. If you are using Windows, you will find it in _
+Documents\Arduino\libraries\SparkFun_ICM-20948_ArduinoLibrary\src\util_.
 
 ## How is the DMP loaded and started?
 
-In version 1.2.5 we added a new helper function named ```initializeDMP```. This is a weak function which you can overwrite e.g. if you want to change the sample rate
-(see [Example10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/examples/Arduino/Example10_DMP_FastMultipleSensors/Example10_DMP_FastMultipleSensors.ino) for details).
-```initializeDMP``` does most of the heavy lifting for you: it downloads the DMP firmware; and configures all of the registers with the appropriate values. The only things
-you need to do manually are: select which DMP sensors to enable; reset and start both FIFO and DMP.
+In version 1.2.5 we added a new helper function named ```initializeDMP```. This is a weak function which you can
+overwrite e.g. if you want to change the sample rate
+(
+see [Example10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/examples/Arduino/Example10_DMP_FastMultipleSensors/Example10_DMP_FastMultipleSensors.ino)
+for details).
+```initializeDMP``` does most of the heavy lifting for you: it downloads the DMP firmware; and configures all of the
+registers with the appropriate values. The only things you need to do manually are: select which DMP sensors to enable;
+reset and start both FIFO and DMP.
 
 The DMP firmware is loaded into the ICM-20948's processor memory space via three special Bank 0 registers:
-- **AGB0_REG_MEM_START_ADDR** (0x7C) - the address which AGB0_REG_MEM_R_W reads from or writes to (it auto-increments after each read or write)
-- **AGB0_REG_MEM_R_W** (0x7D) - the memory read/write register
-- **AGB0_REG_MEM_BANK_SEL** (0x7E) - the memory bank select. The complete read/write address is: (AGB0_REG_MEM_BANK_SEL * 256) + AGB0_REG_MEM_START_ADDR
 
-The firmware binary (14290 or 14301 Bytes) is written into processor memory starting at address 0x90. ```loadDMPFirmware``` automatically breaks the code up into 256 byte blocks and increments
+- **AGB0_REG_MEM_START_ADDR** (0x7C) - the address which AGB0_REG_MEM_R_W reads from or writes to (it auto-increments
+  after each read or write)
+- **AGB0_REG_MEM_R_W** (0x7D) - the memory read/write register
+- **AGB0_REG_MEM_BANK_SEL** (0x7E) - the memory bank select. The complete read/write address is: (AGB0_REG_MEM_BANK_SEL
+  * 256) + AGB0_REG_MEM_START_ADDR
+
+The firmware binary (14290 or 14301 Bytes) is written into processor memory starting at address
+0x90. ```loadDMPFirmware``` automatically breaks the code up into 256 byte blocks and increments
 **AGB0_REG_MEM_BANK_SEL** during the writing.
 
-Before the DMP is enabled, the 16-bit register **AGB2_REG_PRGM_START_ADDRH** (Bank 2, 0x50) needs to be loaded with the program start address. ```setDMPstartAddress``` does this for you.
+Before the DMP is enabled, the 16-bit register **AGB2_REG_PRGM_START_ADDRH** (Bank 2, 0x50) needs to be loaded with the
+program start address. ```setDMPstartAddress``` does this for you.
 
-The DMP is enabled or reset by setting bits in the Bank 0 register **AGB0_REG_USER_CTRL** (0x03). ```enableDMP``` and ```resetDMP``` do this for you.
+The DMP is enabled or reset by setting bits in the Bank 0 register **AGB0_REG_USER_CTRL** (0x03). ```enableDMP```
+and ```resetDMP``` do this for you.
 
-The helper functions ```readDMPmems``` and ```writeDMPmems``` will let you read and write data directly from the DMP memory space.
+The helper functions ```readDMPmems``` and ```writeDMPmems``` will let you read and write data directly from the DMP
+memory space.
 
 ## How do I access the DMP data?
 
-The DMP data is returned via the FIFO (First In First Out). ```readDMPdataFromFIFO``` checks if any data is present in the FIFO (by calling ```getFIFOcount``` which reads the 16-bit register
+The DMP data is returned via the FIFO (First In First Out). ```readDMPdataFromFIFO``` checks if any data is present in
+the FIFO (by calling ```getFIFOcount``` which reads the 16-bit register
 **AGB0_REG_FIFO_COUNT_H** (0x70)). If data is present, it is copied into a ```icm_20948_DMP_data_t``` struct.
 
 ```readDMPdataFromFIFO``` will return:
+
 - ```ICM_20948_Stat_FIFONoDataAvail``` if no data or incomplete data is available
 - ```ICM_20948_Stat_Ok``` if a valid frame was read
 - ```ICM_20948_Stat_FIFOMoreDataAvail``` if a valid frame was read _and_ the FIFO contains more (unread) data
 - ```ICM_20948_Stat_FIFOIncompleteData``` if a frame was present in the FIFO but it was incomplete
 
-You can examine the 16-bit ```icm_20948_DMP_data_t data.header``` to see what data the frame contained. ```data.header``` is a bit field; each bit indicates what data is present:
+You can examine the 16-bit ```icm_20948_DMP_data_t data.header``` to see what data the frame
+contained. ```data.header``` is a bit field; each bit indicates what data is present:
+
 - **DMP_header_bitmap_Compass_Calibr** (0x0020)
 - **DMP_header_bitmap_Gyro_Calibr** (0x0040)
 - **DMP_header_bitmap_Geomag** (0x0100)
@@ -95,7 +122,9 @@ You can examine the 16-bit ```icm_20948_DMP_data_t data.header``` to see what da
 - **DMP_header_bitmap_Gyro** (0x4000)
 - **DMP_header_bitmap_Accel** (0x8000)
 
-**DMP_header_bitmap_Header2** (0x0008) indicates if any secondary data was included. If the **DMP_header_bitmap_Header2** bit is set, the frame also contained one or more of:
+**DMP_header_bitmap_Header2** (0x0008) indicates if any secondary data was included. If the **
+DMP_header_bitmap_Header2** bit is set, the frame also contained one or more of:
+
 - **DMP_header2_bitmap_Compass_Accuracy** (0x1000)
 - **DMP_header2_bitmap_Gyro_Accuracy** (0x2000)
 - **DMP_header2_bitmap_Accel_Accuracy** (0x4000)
@@ -125,42 +154,54 @@ INV_ICM20948_SENSOR_ORIENTATION                 (32-bit 9-axis quaternion + head
 ## What changes did you make in v1.2.5?
 
 In v1.2.5 we added some critical missing configuration steps:
-- We use I2C_SLV0 and I2C_SLV1 to request the magnetometer data and trigger the next Single Measurement. We no longer use the 100Hz continuous mode for the DMP
-- We now read ten bytes of data from the magnetometer, starting at register 0x03; instead of reading nine bytes, starting at register 0x10
-  - Register 0x03 is reserved and the other nine registers are undocumented. They appear to contain the raw magnetometer reading in big-endian format (instead of little-endian)
-  - We had to dig deep into InvenSense's Icm20948AuxCompassAkm.c to find this out...
-- We configure the I2C Master ODR which reduces the magnetometer read rate from a silly 1100Hz to a sensible 69Hz
-  - We had to monitor the Aux I2C pins and study the AK09916 traffic to figure this out...
 
-The DMP configuration code was becoming so verbose that we decided to move it into its own function called ```initializeDMP```. This is a weak function which you can overwrite
-e.g. if you want to change the sample rate
-(see [Example10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/examples/Arduino/Example10_DMP_FastMultipleSensors/Example10_DMP_FastMultipleSensors.ino) for details).
-```initializeDMP``` does most of the heavy lifting for you: it downloads the DMP firmware; and configures all of the registers with the appropriate values. The only things
-you need to do manually are: select which DMP sensors to enable; reset and start both FIFO and DMP. Please see the revised DMP examples for more details.
+- We use I2C_SLV0 and I2C_SLV1 to request the magnetometer data and trigger the next Single Measurement. We no longer
+  use the 100Hz continuous mode for the DMP
+- We now read ten bytes of data from the magnetometer, starting at register 0x03; instead of reading nine bytes,
+  starting at register 0x10
+    - Register 0x03 is reserved and the other nine registers are undocumented. They appear to contain the raw
+      magnetometer reading in big-endian format (instead of little-endian)
+    - We had to dig deep into InvenSense's Icm20948AuxCompassAkm.c to find this out...
+- We configure the I2C Master ODR which reduces the magnetometer read rate from a silly 1100Hz to a sensible 69Hz
+    - We had to monitor the Aux I2C pins and study the AK09916 traffic to figure this out...
+
+The DMP configuration code was becoming so verbose that we decided to move it into its own function
+called ```initializeDMP```. This is a weak function which you can overwrite e.g. if you want to change the sample rate
+(
+see [Example10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/blob/master/examples/Arduino/Example10_DMP_FastMultipleSensors/Example10_DMP_FastMultipleSensors.ino)
+for details).
+```initializeDMP``` does most of the heavy lifting for you: it downloads the DMP firmware; and configures all of the
+registers with the appropriate values. The only things you need to do manually are: select which DMP sensors to enable;
+reset and start both FIFO and DMP. Please see the revised DMP examples for more details.
 
 ## What changes did you make in v1.2.6?
 
-The final piece of the DMP puzzle turned out to be that the accel and gyro must not be in low power mode when using the DMP. The InvenSense code puts the I2C Controller,
-the accel and the gyro into low power mode initially; our library did the same thing. But we had missed that the code then changes its mind and leaves only the I2C Controller
-in low power mode. This subtle detail is what was preventing the DMP from working correctly. (It took us _weeks_ to find this!)
+The final piece of the DMP puzzle turned out to be that the accel and gyro must not be in low power mode when using the
+DMP. The InvenSense code puts the I2C Controller, the accel and the gyro into low power mode initially; our library did
+the same thing. But we had missed that the code then changes its mind and leaves only the I2C Controller in low power
+mode. This subtle detail is what was preventing the DMP from working correctly. (It took us _weeks_ to find this!)
 
 ## Where are the DMP registers defined?
 
 You will find the definitions in ```ICM_20948_DMP.h```.
 
-That file also includes the definition for the ```icm_20948_DMP_data_t``` struct which is loaded with DMP data from the FIFO.
+That file also includes the definition for the ```icm_20948_DMP_data_t``` struct which is loaded with DMP data from the
+FIFO.
 
 ```const int``` declarations (including the DMP firmware image) are in ```ICM_20948_C.c```
 
 ## Can the DMP generate interrupts?
 
-Yes it can, but you might find that they are not fully supported as we have not tested them. The main functions you will need to experiment with are ```intEnableDMP``` and ```enableDMPSensorInt```.
+Yes it can, but you might find that they are not fully supported as we have not tested them. The main functions you will
+need to experiment with are ```intEnableDMP``` and ```enableDMPSensorInt```.
 
 ## How is the DMP data rate set?
 
-It is a _combination_ of the raw sensor rate (set by ```setSampleRate```) and the multiple DMP Output Data Rate (ODR) registers
-(set by ```setDMPODRrate```). There are other settings that need to be changed to match the sample rate too.
-Please see [examples 9 & 10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/tree/master/examples/Arduino) for more details.
+It is a _combination_ of the raw sensor rate (set by ```setSampleRate```) and the multiple DMP Output Data Rate (ODR)
+registers
+(set by ```setDMPODRrate```). There are other settings that need to be changed to match the sample rate too. Please
+see [examples 9 & 10](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary/tree/master/examples/Arduino) for
+more details.
 
 The DMP is capable of outputting multiple sensor data at different rates to the FIFO.
 
@@ -170,8 +211,8 @@ Absolutely! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for further details.
 
 ## Can I see the full DMP configuration captured from @ZaneL 's Teensy-ICM-20948 code?
 
-Brace yourself. Here it is. ZaneL's code defaults to using the Game Rotation Vector (Quat6) at 225Hz and - by default - does not start the magnetometer.
-So you won't see the I2C Controller configuration traffic here.
+Brace yourself. Here it is. ZaneL's code defaults to using the Game Rotation Vector (Quat6) at 225Hz and - by default -
+does not start the magnetometer. So you won't see the I2C Controller configuration traffic here.
 
 - **...** indicates where I've omitted some of the bus transactions (e.g. the bulk of the firmware upload)
 

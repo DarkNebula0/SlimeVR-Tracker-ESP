@@ -8,15 +8,15 @@ uint8_t portArray[] = {4, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 32
 String portMap[] = {"4", "13", "14", "15", "16", "17", "18", "19", "21", "22", "23", "25", "26", "27", "32", "33"};
 #endif
 
-namespace I2CSCAN
-{
+namespace I2CSCAN {
 
     uint8_t pickDevice(uint8_t addr1, uint8_t addr2, bool scanIfNotFound) {
-        if(I2CSCAN::isI2CExist(addr1))
+        if (I2CSCAN::isI2CExist(addr1))
             return addr1;
-        if(!I2CSCAN::isI2CExist(addr2)) {
-            if(scanIfNotFound) {
-                Serial.println("[ERR] I2C: Can't find I2C device on provided addresses, scanning for all I2C devices and returning");
+        if (!I2CSCAN::isI2CExist(addr2)) {
+            if (scanIfNotFound) {
+                Serial.println(
+                        "[ERR] I2C: Can't find I2C device on provided addresses, scanning for all I2C devices and returning");
                 I2CSCAN::scani2cports();
             } else {
                 Serial.println("[ERR] I2C: Can't find I2C device on provided addresses");
@@ -26,42 +26,35 @@ namespace I2CSCAN
         return addr2;
     }
 
-    void scani2cports()
-    {
+    void scani2cports() {
         bool found = false;
-        for (uint8_t i = 0; i < sizeof(portArray); i++)
-        {
-            for (uint8_t j = 0; j < sizeof(portArray); j++)
-            {
-                if (i != j)
-                {
-                    if(checkI2C(i, j))
+        for (uint8_t i = 0; i < sizeof(portArray); i++) {
+            for (uint8_t j = 0; j < sizeof(portArray); j++) {
+                if (i != j) {
+                    if (checkI2C(i, j))
                         found = true;
                 }
             }
         }
-        if(!found) {
+        if (!found) {
             Serial.println("[ERR] I2C: No I2C devices found");
         }
     }
 
-    bool checkI2C(uint8_t i, uint8_t j)
-    {
+    bool checkI2C(uint8_t i, uint8_t j) {
         bool found = false;
         Wire.begin(portArray[i], portArray[j]);
         byte error, address;
         int nDevices;
         nDevices = 0;
-        for (address = 1; address < 127; address++)
-        {
+        for (address = 1; address < 127; address++) {
             // The i2c_scanner uses the return value of
             // the Write.endTransmisstion to see if
             // a device did acknowledge to the address.
             Wire.beginTransmission(address);
             error = Wire.endTransmission();
 
-            if (error == 0)
-            {
+            if (error == 0) {
                 Serial.print("[DBG] I2C (@ " + portMap[i] + " : " + portMap[j] + "): ");
                 Serial.print("I2C device found at address 0x");
                 if (address < 16)
@@ -71,9 +64,7 @@ namespace I2CSCAN
 
                 nDevices++;
                 found = true;
-            }
-            else if (error == 4)
-            {
+            } else if (error == 4) {
                 Serial.print("[ERR] I2C (@ " + portMap[i] + " : " + portMap[j] + "): ");
                 Serial.print("Unknow error at address 0x");
                 if (address < 16)
@@ -87,7 +78,7 @@ namespace I2CSCAN
     bool isI2CExist(uint8_t addr) {
         Wire.beginTransmission(addr);
         byte error = Wire.endTransmission();
-        if(error == 0)
+        if (error == 0)
             return true;
         return false;
     }
@@ -108,9 +99,9 @@ namespace I2CSCAN
      * This code may be freely used for both private and commerical use
      */
     int clearBus(uint8_t SDA, uint8_t SCL) {
-        #if defined(TWCR) && defined(TWEN)
+#if defined(TWCR) && defined(TWEN)
         TWCR &= ~(_BV(TWEN)); //Disable the Atmel 2-Wire interface so we can control the SDA and SCL pins directly
-        #endif
+#endif
 
         pinMode(SDA, INPUT_PULLUP); // Make SDA (data) and SCL (clock) pins Inputs with pullup.
         pinMode(SCL, INPUT_PULLUP);
@@ -125,7 +116,7 @@ namespace I2CSCAN
 
         while (SDA_LOW && (clockCount > 0)) { //  vii. If SDA is Low,
             clockCount--;
-        // Note: I2C bus is open collector so do NOT drive SCL or SDA high.
+            // Note: I2C bus is open collector so do NOT drive SCL or SDA high.
             pinMode(SCL, INPUT); // release SCL pullup so that when made output it will be LOW
             pinMode(SCL, OUTPUT); // then clock SCL Low
             delayMicroseconds(10); //  for >5uS
@@ -137,12 +128,12 @@ namespace I2CSCAN
             SCL_LOW = (digitalRead(SCL) == LOW); // Check if SCL is Low.
             int counter = 20;
             while (SCL_LOW && (counter > 0)) {  //  loop waiting for SCL to become High only wait 2sec.
-            counter--;
-            delay(100);
-            SCL_LOW = (digitalRead(SCL) == LOW);
+                counter--;
+                delay(100);
+                SCL_LOW = (digitalRead(SCL) == LOW);
             }
             if (SCL_LOW) { // still low after 2 sec error
-            return 2; // I2C bus error. Could not clear. SCL clock line held low by slave clock stretch for >2sec
+                return 2; // I2C bus error. Could not clear. SCL clock line held low by slave clock stretch for >2sec
             }
             SDA_LOW = (digitalRead(SDA) == LOW); //   and check SDA input again and loop
         }

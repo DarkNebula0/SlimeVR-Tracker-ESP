@@ -27,7 +27,8 @@
 #include <ArduinoOTA.h>
 
 namespace OTA {
-    void otaSetup(const char * const otaPassword);
+    void otaSetup(const char *const otaPassword);
+
     void otaUpdate();
 }
 

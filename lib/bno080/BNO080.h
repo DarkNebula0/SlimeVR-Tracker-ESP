@@ -42,7 +42,9 @@
 #pragma once
 
 #if (ARDUINO >= 100)
+
 #include "Arduino.h"
+
 #else
 #include "WProgram.h"
 #endif
@@ -140,213 +142,298 @@ const byte CHANNEL_GYRO = 5;
 #define MAX_METADATA_SIZE 9 //This is in words. There can be many but we mostly only care about the first 9 (Qs, range, etc)
 
 struct BNO080Error {
-	uint8_t severity;
-	uint8_t error_sequence_number;
-	uint8_t error_source;
-	uint8_t error;
-	uint8_t error_module;
-	uint8_t error_code;
+    uint8_t severity;
+    uint8_t error_sequence_number;
+    uint8_t error_source;
+    uint8_t error;
+    uint8_t error_module;
+    uint8_t error_code;
 };
 
-class BNO080
-{
+class BNO080 {
 public:
-	boolean begin(uint8_t deviceAddress = BNO080_DEFAULT_ADDRESS, TwoWire &wirePort = Wire, uint8_t intPin = 255); //By default use the default I2C addres, and use Wire port, and don't declare an INT pin
-	boolean beginSPI(uint8_t user_CSPin, uint8_t user_WAKPin, uint8_t user_INTPin, uint8_t user_RSTPin, uint32_t spiPortSpeed = 3000000, SPIClass &spiPort = SPI);
+    boolean begin(uint8_t deviceAddress = BNO080_DEFAULT_ADDRESS, TwoWire &wirePort = Wire,
+                  uint8_t intPin = 255); //By default use the default I2C addres, and use Wire port, and don't declare an INT pin
+    boolean beginSPI(uint8_t user_CSPin, uint8_t user_WAKPin, uint8_t user_INTPin, uint8_t user_RSTPin,
+                     uint32_t spiPortSpeed = 3000000, SPIClass &spiPort = SPI);
 
-	void enableDebugging(Stream &debugPort = Serial); //Turn on debug printing. If user doesn't specify then Serial will be used.
+    void enableDebugging(
+            Stream &debugPort = Serial); //Turn on debug printing. If user doesn't specify then Serial will be used.
 
-	void softReset();	  //Try to reset the IMU via software
-	uint8_t resetReason(); //Query the IMU for the reason it last reset
-	void modeOn();	  //Use the executable channel to turn the BNO on
-	void modeSleep();	  //Use the executable channel to put the BNO to sleep
+    void softReset();      //Try to reset the IMU via software
+    uint8_t resetReason(); //Query the IMU for the reason it last reset
+    void modeOn();      //Use the executable channel to turn the BNO on
+    void modeSleep();      //Use the executable channel to put the BNO to sleep
 
-	float qToFloat(int16_t fixedPointValue, uint8_t qPoint); //Given a Q value, converts fixed point floating to regular floating point number
+    float qToFloat(int16_t fixedPointValue,
+                   uint8_t qPoint); //Given a Q value, converts fixed point floating to regular floating point number
 
-	boolean waitForI2C(); //Delay based polling for I2C traffic
-	boolean I2CTimedOut(); // Check if last time I2C timed out
-	boolean waitForSPI(); //Delay based polling for INT pin to go low
-	boolean receivePacket(void);
-	boolean getData(uint16_t bytesRemaining); //Given a number of bytes, send the requests in I2C_BUFFER_LENGTH chunks
-	boolean sendPacket(uint8_t channelNumber, uint8_t dataLength);
-	void printPacket(void); //Prints the current shtp header and data packets
-	void printHeader(void); //Prints the current shtp header (only)
+    boolean waitForI2C(); //Delay based polling for I2C traffic
+    boolean I2CTimedOut(); // Check if last time I2C timed out
+    boolean waitForSPI(); //Delay based polling for INT pin to go low
+    boolean receivePacket(void);
 
-	void enableRotationVector(uint16_t timeBetweenReports);
-	void enableGameRotationVector(uint16_t timeBetweenReports);
-	void enableARVRStabilizedRotationVector(uint16_t timeBetweenReports);
-	void enableARVRStabilizedGameRotationVector(uint16_t timeBetweenReports);
-	void enableAccelerometer(uint16_t timeBetweenReports);
-	void enableGravity(uint16_t timeBetweenReports);
-	void enableLinearAccelerometer(uint16_t timeBetweenReports);
-	void enableGyro(uint16_t timeBetweenReports);
-	void enableMagnetometer(uint16_t timeBetweenReports);
-	void enableTapDetector(uint16_t timeBetweenReports);
-	void enableStepCounter(uint16_t timeBetweenReports);
-	void enableStabilityClassifier(uint16_t timeBetweenReports);
-	void enableActivityClassifier(uint16_t timeBetweenReports, uint32_t activitiesToEnable, uint8_t (&activityConfidences)[9]);
-	void enableRawAccelerometer(uint16_t timeBetweenReports);
-	void enableRawGyro(uint16_t timeBetweenReports);
-	void enableRawMagnetometer(uint16_t timeBetweenReports);
-	void enableGyroIntegratedRotationVector(uint16_t timeBetweenReports);
+    boolean getData(uint16_t bytesRemaining); //Given a number of bytes, send the requests in I2C_BUFFER_LENGTH chunks
+    boolean sendPacket(uint8_t channelNumber, uint8_t dataLength);
 
-	bool dataAvailable(void);
-	uint16_t getReadings(void);
-	uint16_t parseInputReport(void);   //Parse sensor readings out of report
-	uint16_t parseCommandReport(void); //Parse command responses out of report
+    void printPacket(void); //Prints the current shtp header and data packets
+    void printHeader(void); //Prints the current shtp header (only)
 
-	bool hasNewQuat();
-	bool hasNewGameQuat();
-	bool hasNewMagQuat();
-	void getQuat(float &i, float &j, float &k, float &real, float &radAccuracy, uint8_t &accuracy);
-	void getGameQuat(float &i, float &j, float &k, float &real, uint8_t &accuracy);
-	void getMagQuat(float &i, float &j, float &k, float &real, float &radAccuracy, uint8_t &accuracy);
-	float getQuatI();
-	float getQuatJ();
-	float getQuatK();
-	float getQuatReal();
-	float getQuatRadianAccuracy();
-	uint8_t getQuatAccuracy();
+    void enableRotationVector(uint16_t timeBetweenReports);
 
-	void getAccel(float &x, float &y, float &z, uint8_t &accuracy);
-	float getAccelX();
-	float getAccelY();
-	float getAccelZ();
-	uint8_t getAccelAccuracy();
-	bool hasNewAccel();
+    void enableGameRotationVector(uint16_t timeBetweenReports);
 
-	void getLinAccel(float &x, float &y, float &z, uint8_t &accuracy);
-	float getLinAccelX();
-	float getLinAccelY();
-	float getLinAccelZ();
-	uint8_t getLinAccelAccuracy();
+    void enableARVRStabilizedRotationVector(uint16_t timeBetweenReports);
 
-	void getGyro(float &x, float &y, float &z, uint8_t &accuracy);
-	float getGyroX();
-	float getGyroY();
-	float getGyroZ();
-	uint8_t getGyroAccuracy();
+    void enableARVRStabilizedGameRotationVector(uint16_t timeBetweenReports);
 
-	void getFastGyro(float &x, float &y, float &z);
-	float getFastGyroX();
-	float getFastGyroY();
-	float getFastGyroZ();
+    void enableAccelerometer(uint16_t timeBetweenReports);
 
-	void getMag(float &x, float &y, float &z, uint8_t &accuracy);
-	float getMagX();
-	float getMagY();
-	float getMagZ();
-	uint8_t getMagAccuracy();
+    void enableGravity(uint16_t timeBetweenReports);
 
-	void calibrateAccelerometer();
-	void calibrateGyro();
-	void calibrateMagnetometer();
-	void calibratePlanarAccelerometer();
-	void calibrateAll();
-	void endCalibration();
-	void saveCalibration();
-	void requestCalibrationStatus(); //Sends command to get status
-	boolean calibrationComplete();   //Checks ME Cal response for byte 5, R0 - Status
+    void enableLinearAccelerometer(uint16_t timeBetweenReports);
 
-	uint8_t getTapDetector();
-	bool getTapDetected();
-	uint32_t getTimeStamp();
-	uint16_t getStepCount();
-	uint8_t getStabilityClassifier();
-	uint8_t getActivityClassifier();
+    void enableGyro(uint16_t timeBetweenReports);
 
-	int16_t getRawAccelX();
-	int16_t getRawAccelY();
-	int16_t getRawAccelZ();
+    void enableMagnetometer(uint16_t timeBetweenReports);
 
-	int16_t getRawGyroX();
-	int16_t getRawGyroY();
-	int16_t getRawGyroZ();
+    void enableTapDetector(uint16_t timeBetweenReports);
 
-	int16_t getRawMagX();
-	int16_t getRawMagY();
-	int16_t getRawMagZ();
+    void enableStepCounter(uint16_t timeBetweenReports);
 
-	float getRoll();
-	float getPitch();
-	float getYaw();
+    void enableStabilityClassifier(uint16_t timeBetweenReports);
 
-	void setFeatureCommand(uint8_t reportID, uint16_t timeBetweenReports);
-	void setFeatureCommand(uint8_t reportID, uint16_t timeBetweenReports, uint32_t specificConfig);
-	void sendCommand(uint8_t command);
-	void sendCalibrateCommand(uint8_t thingToCalibrate);
+    void enableActivityClassifier(uint16_t timeBetweenReports, uint32_t activitiesToEnable,
+                                  uint8_t (&activityConfidences)[9]);
 
-	//Metadata functions
-	int16_t getQ1(uint16_t recordID);
-	int16_t getQ2(uint16_t recordID);
-	int16_t getQ3(uint16_t recordID);
-	float getResolution(uint16_t recordID);
-	float getRange(uint16_t recordID);
-	uint32_t readFRSword(uint16_t recordID, uint8_t wordNumber);
-	void frsReadRequest(uint16_t recordID, uint16_t readOffset, uint16_t blockSize);
-	bool readFRSdata(uint16_t recordID, uint8_t startLocation, uint8_t wordsToRead);
+    void enableRawAccelerometer(uint16_t timeBetweenReports);
 
-	BNO080Error readError();
+    void enableRawGyro(uint16_t timeBetweenReports);
 
-	//Global Variables
-	uint8_t shtpHeader[4]; //Each packet has a header of 4 bytes
-	uint8_t shtpData[MAX_PACKET_SIZE];
-	uint8_t sequenceNumber[6] = {0, 0, 0, 0, 0, 0}; //There are 6 com channels. Each channel has its own seqnum
-	uint8_t commandSequenceNumber = 0;				//Commands have a seqNum as well. These are inside command packet, the header uses its own seqNum per channel
-	uint32_t metaData[MAX_METADATA_SIZE];			//There is more than 10 words in a metadata record but we'll stop at Q point 3
+    void enableRawMagnetometer(uint16_t timeBetweenReports);
 
-	// IMU info
-	uint8_t swMajor;
-	uint8_t swMinor;
-	uint32_t swPartNumber;
-	uint32_t swBuildNumber;
-	uint16_t swVersionPatch;
+    void enableGyroIntegratedRotationVector(uint16_t timeBetweenReports);
+
+    bool dataAvailable(void);
+
+    uint16_t getReadings(void);
+
+    uint16_t parseInputReport(void);   //Parse sensor readings out of report
+    uint16_t parseCommandReport(void); //Parse command responses out of report
+
+    bool hasNewQuat();
+
+    bool hasNewGameQuat();
+
+    bool hasNewMagQuat();
+
+    void getQuat(float &i, float &j, float &k, float &real, float &radAccuracy, uint8_t &accuracy);
+
+    void getGameQuat(float &i, float &j, float &k, float &real, uint8_t &accuracy);
+
+    void getMagQuat(float &i, float &j, float &k, float &real, float &radAccuracy, uint8_t &accuracy);
+
+    float getQuatI();
+
+    float getQuatJ();
+
+    float getQuatK();
+
+    float getQuatReal();
+
+    float getQuatRadianAccuracy();
+
+    uint8_t getQuatAccuracy();
+
+    void getAccel(float &x, float &y, float &z, uint8_t &accuracy);
+
+    float getAccelX();
+
+    float getAccelY();
+
+    float getAccelZ();
+
+    uint8_t getAccelAccuracy();
+
+    bool hasNewAccel();
+
+    void getLinAccel(float &x, float &y, float &z, uint8_t &accuracy);
+
+    float getLinAccelX();
+
+    float getLinAccelY();
+
+    float getLinAccelZ();
+
+    uint8_t getLinAccelAccuracy();
+
+    void getGyro(float &x, float &y, float &z, uint8_t &accuracy);
+
+    float getGyroX();
+
+    float getGyroY();
+
+    float getGyroZ();
+
+    uint8_t getGyroAccuracy();
+
+    void getFastGyro(float &x, float &y, float &z);
+
+    float getFastGyroX();
+
+    float getFastGyroY();
+
+    float getFastGyroZ();
+
+    void getMag(float &x, float &y, float &z, uint8_t &accuracy);
+
+    float getMagX();
+
+    float getMagY();
+
+    float getMagZ();
+
+    uint8_t getMagAccuracy();
+
+    void calibrateAccelerometer();
+
+    void calibrateGyro();
+
+    void calibrateMagnetometer();
+
+    void calibratePlanarAccelerometer();
+
+    void calibrateAll();
+
+    void endCalibration();
+
+    void saveCalibration();
+
+    void requestCalibrationStatus(); //Sends command to get status
+    boolean calibrationComplete();   //Checks ME Cal response for byte 5, R0 - Status
+
+    uint8_t getTapDetector();
+
+    bool getTapDetected();
+
+    uint32_t getTimeStamp();
+
+    uint16_t getStepCount();
+
+    uint8_t getStabilityClassifier();
+
+    uint8_t getActivityClassifier();
+
+    int16_t getRawAccelX();
+
+    int16_t getRawAccelY();
+
+    int16_t getRawAccelZ();
+
+    int16_t getRawGyroX();
+
+    int16_t getRawGyroY();
+
+    int16_t getRawGyroZ();
+
+    int16_t getRawMagX();
+
+    int16_t getRawMagY();
+
+    int16_t getRawMagZ();
+
+    float getRoll();
+
+    float getPitch();
+
+    float getYaw();
+
+    void setFeatureCommand(uint8_t reportID, uint16_t timeBetweenReports);
+
+    void setFeatureCommand(uint8_t reportID, uint16_t timeBetweenReports, uint32_t specificConfig);
+
+    void sendCommand(uint8_t command);
+
+    void sendCalibrateCommand(uint8_t thingToCalibrate);
+
+    //Metadata functions
+    int16_t getQ1(uint16_t recordID);
+
+    int16_t getQ2(uint16_t recordID);
+
+    int16_t getQ3(uint16_t recordID);
+
+    float getResolution(uint16_t recordID);
+
+    float getRange(uint16_t recordID);
+
+    uint32_t readFRSword(uint16_t recordID, uint8_t wordNumber);
+
+    void frsReadRequest(uint16_t recordID, uint16_t readOffset, uint16_t blockSize);
+
+    bool readFRSdata(uint16_t recordID, uint8_t startLocation, uint8_t wordsToRead);
+
+    BNO080Error readError();
+
+    //Global Variables
+    uint8_t shtpHeader[4]; //Each packet has a header of 4 bytes
+    uint8_t shtpData[MAX_PACKET_SIZE];
+    uint8_t sequenceNumber[6] = {0, 0, 0, 0, 0, 0}; //There are 6 com channels. Each channel has its own seqnum
+    uint8_t commandSequenceNumber = 0;                //Commands have a seqNum as well. These are inside command packet, the header uses its own seqNum per channel
+    uint32_t metaData[MAX_METADATA_SIZE];            //There is more than 10 words in a metadata record but we'll stop at Q point 3
+
+    // IMU info
+    uint8_t swMajor;
+    uint8_t swMinor;
+    uint32_t swPartNumber;
+    uint32_t swBuildNumber;
+    uint16_t swVersionPatch;
 
 private:
-	//Variables
-	TwoWire *_i2cPort;		//The generic connection to user's chosen I2C hardware
-	uint8_t _deviceAddress; //Keeps track of I2C address. setI2CAddress changes this.
-	bool i2cTimedOut = false;
+    //Variables
+    TwoWire *_i2cPort;        //The generic connection to user's chosen I2C hardware
+    uint8_t _deviceAddress; //Keeps track of I2C address. setI2CAddress changes this.
+    bool i2cTimedOut = false;
 
-	Stream *_debugPort;			 //The stream to send debug messages to if enabled. Usually Serial.
-	boolean _printDebug = false; //Flag to print debugging variables
+    Stream *_debugPort;             //The stream to send debug messages to if enabled. Usually Serial.
+    boolean _printDebug = false; //Flag to print debugging variables
 
-	SPIClass *_spiPort;			 //The generic connection to user's chosen SPI hardware
-	unsigned long _spiPortSpeed; //Optional user defined port speed
-	uint8_t _cs;				 //Pins needed for SPI
-	uint8_t _wake;
-	uint8_t _int;
-	uint8_t _rst;
+    SPIClass *_spiPort;             //The generic connection to user's chosen SPI hardware
+    unsigned long _spiPortSpeed; //Optional user defined port speed
+    uint8_t _cs;                 //Pins needed for SPI
+    uint8_t _wake;
+    uint8_t _int;
+    uint8_t _rst;
 
-	//These are the raw sensor values (without Q applied) pulled from the user requested Input Report
-	uint16_t rawAccelX, rawAccelY, rawAccelZ, accelAccuracy;
-	uint16_t rawLinAccelX, rawLinAccelY, rawLinAccelZ, accelLinAccuracy;
-	uint16_t rawGyroX, rawGyroY, rawGyroZ, gyroAccuracy;
-	uint16_t rawMagX, rawMagY, rawMagZ, magAccuracy;
-	uint16_t rawQuatI, rawQuatJ, rawQuatK, rawQuatReal, rawQuatRadianAccuracy, quatAccuracy;
-	uint16_t rawGameQuatI, rawGameQuatJ, rawGameQuatK, rawGameQuatReal, quatGameAccuracy;
-	uint16_t rawMagQuatI, rawMagQuatJ, rawMagQuatK, rawMagQuatReal, rawMagQuatRadianAccuracy, quatMagAccuracy;
-	bool hasNewQuaternion, hasNewGameQuaternion, hasNewMagQuaternion, hasNewAccel_;
-	uint16_t rawFastGyroX, rawFastGyroY, rawFastGyroZ;
-	uint8_t tapDetector;
-	bool hasNewTap;
-	uint16_t stepCount;
-	uint32_t timeStamp;
-	uint8_t stabilityClassifier;
-	uint8_t activityClassifier;
-	uint8_t *_activityConfidences;						  //Array that store the confidences of the 9 possible activities
-	uint8_t calibrationStatus;							  //Byte R0 of ME Calibration Response
-	uint16_t memsRawAccelX, memsRawAccelY, memsRawAccelZ; //Raw readings from MEMS sensor
-	uint16_t memsRawGyroX, memsRawGyroY, memsRawGyroZ;	//Raw readings from MEMS sensor
-	uint16_t memsRawMagX, memsRawMagY, memsRawMagZ;		  //Raw readings from MEMS sensor
+    //These are the raw sensor values (without Q applied) pulled from the user requested Input Report
+    uint16_t rawAccelX, rawAccelY, rawAccelZ, accelAccuracy;
+    uint16_t rawLinAccelX, rawLinAccelY, rawLinAccelZ, accelLinAccuracy;
+    uint16_t rawGyroX, rawGyroY, rawGyroZ, gyroAccuracy;
+    uint16_t rawMagX, rawMagY, rawMagZ, magAccuracy;
+    uint16_t rawQuatI, rawQuatJ, rawQuatK, rawQuatReal, rawQuatRadianAccuracy, quatAccuracy;
+    uint16_t rawGameQuatI, rawGameQuatJ, rawGameQuatK, rawGameQuatReal, quatGameAccuracy;
+    uint16_t rawMagQuatI, rawMagQuatJ, rawMagQuatK, rawMagQuatReal, rawMagQuatRadianAccuracy, quatMagAccuracy;
+    bool hasNewQuaternion, hasNewGameQuaternion, hasNewMagQuaternion, hasNewAccel_;
+    uint16_t rawFastGyroX, rawFastGyroY, rawFastGyroZ;
+    uint8_t tapDetector;
+    bool hasNewTap;
+    uint16_t stepCount;
+    uint32_t timeStamp;
+    uint8_t stabilityClassifier;
+    uint8_t activityClassifier;
+    uint8_t *_activityConfidences;                          //Array that store the confidences of the 9 possible activities
+    uint8_t calibrationStatus;                              //Byte R0 of ME Calibration Response
+    uint16_t memsRawAccelX, memsRawAccelY, memsRawAccelZ; //Raw readings from MEMS sensor
+    uint16_t memsRawGyroX, memsRawGyroY, memsRawGyroZ;    //Raw readings from MEMS sensor
+    uint16_t memsRawMagX, memsRawMagY, memsRawMagZ;          //Raw readings from MEMS sensor
 
-	//These Q values are defined in the datasheet but can also be obtained by querying the meta data records
-	//See the read metadata example for more info
-	int16_t rotationVector_Q1 = 14;
-	int16_t rotationVectorAccuracy_Q1 = 12; //Heading accuracy estimate in radians. The Q point is 12.
-	int16_t accelerometer_Q1 = 8;
-	int16_t linear_accelerometer_Q1 = 8;
-	int16_t gyro_Q1 = 9;
-	int16_t magnetometer_Q1 = 4;
-	int16_t angular_velocity_Q1 = 10;
+    //These Q values are defined in the datasheet but can also be obtained by querying the meta data records
+    //See the read metadata example for more info
+    int16_t rotationVector_Q1 = 14;
+    int16_t rotationVectorAccuracy_Q1 = 12; //Heading accuracy estimate in radians. The Q point is 12.
+    int16_t accelerometer_Q1 = 8;
+    int16_t linear_accelerometer_Q1 = 8;
+    int16_t gyro_Q1 = 9;
+    int16_t magnetometer_Q1 = 4;
+    int16_t angular_velocity_Q1 = 10;
 };

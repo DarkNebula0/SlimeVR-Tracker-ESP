@@ -22,8 +22,7 @@
 */
 #include "ledmgr.h"
 
-namespace LEDManager
-{
+namespace LEDManager {
     SlimeVR::Logging::Logger logger("LEDManager");
 
     /*!
@@ -31,11 +30,10 @@ namespace LEDManager
     *  @param  pin
     *          LED pin
     */
-    void on(uint8_t pin)
-    {
-        #if ENABLE_LEDS
-            digitalWrite(pin, LOW);
-        #endif
+    void on(uint8_t pin) {
+#if ENABLE_LEDS
+        digitalWrite(pin, LOW);
+#endif
     }
 
     /*!
@@ -43,11 +41,10 @@ namespace LEDManager
     *  @param  pin
     *          LED pin
     */
-    void off(uint8_t pin)
-    {
-        #if ENABLE_LEDS
-            digitalWrite(pin, HIGH);
-        #endif
+    void off(uint8_t pin) {
+#if ENABLE_LEDS
+        digitalWrite(pin, HIGH);
+#endif
     }
 
     /*!
@@ -59,13 +56,12 @@ namespace LEDManager
     *  @param  direction
     *          Direction turn the LED on, usually LOW
     */
-    void blink(uint8_t pin, unsigned long time, uint8_t direction)
-    {
-        #if ENABLE_LEDS
-            digitalWrite(pin, direction);
-            delay(time);
-            digitalWrite(pin, direction ^ 1);
-        #endif
+    void blink(uint8_t pin, unsigned long time, uint8_t direction) {
+#if ENABLE_LEDS
+        digitalWrite(pin, direction);
+        delay(time);
+        digitalWrite(pin, direction ^ 1);
+#endif
     }
 
     /*!
@@ -81,17 +77,15 @@ namespace LEDManager
     *  @param  direction
     *          Direction turn the LED on, usually LOW
     */
-    void pattern(uint8_t pin, unsigned long timeon, unsigned long timeoff, int times, uint8_t direction)
-    {
-        #if ENABLE_LEDS
-            for (int i = 0; i < times; i++)
-            {
-                digitalWrite(pin, direction);
-                delay(timeon);
-                digitalWrite(pin, direction ^ 1);
-                delay(timeoff);
-            }
-        #endif
+    void pattern(uint8_t pin, unsigned long timeon, unsigned long timeoff, int times, uint8_t direction) {
+#if ENABLE_LEDS
+        for (int i = 0; i < times; i++) {
+            digitalWrite(pin, direction);
+            delay(timeon);
+            digitalWrite(pin, direction ^ 1);
+            delay(timeoff);
+        }
+#endif
     }
 
     uint32_t currentStatus = 0;
@@ -112,22 +106,22 @@ namespace LEDManager
     void ledStatusUpdate() {
         unsigned long time = millis();
         unsigned long diff = time - lastUpdate;
-        if(diff < 10)
+        if (diff < 10)
             return;
         lastUpdate = time;
 
         unsigned int length;
         unsigned int count;
         bool printStatus = false;
-        #if defined(STATUS_PRINT_INTERVAL) && STATUS_PRINT_INTERVAL > 0
-            if(statusPrintInterval += diff > STATUS_PRINT_INTERVAL) {
-                statusPrintInterval = 0;
-                printStatus = true;
-            }
-        #endif
-        if((currentStatus & LED_STATUS_LOW_BATTERY) > 0) {
+#if defined(STATUS_PRINT_INTERVAL) && STATUS_PRINT_INTERVAL > 0
+        if (statusPrintInterval += diff > STATUS_PRINT_INTERVAL) {
+            statusPrintInterval = 0;
+            printStatus = true;
+        }
+#endif
+        if ((currentStatus & LED_STATUS_LOW_BATTERY) > 0) {
             count = LOW_BATTERY_COUNT;
-            switch(currentStage) {
+            switch (currentStage) {
                 case ON:
                 case OFF:
                     length = LOW_BATTERY_LENGTH;
@@ -138,12 +132,12 @@ namespace LEDManager
                 case INTERVAL:
                     length = LOW_BATTERY_INTERVAL;
                     break;
-                }
-            if(printStatus)
+            }
+            if (printStatus)
                 logger.debug("LOW BATTERY");
-        } else if((currentStatus & LED_STATUS_IMU_ERROR) > 0) {
+        } else if ((currentStatus & LED_STATUS_IMU_ERROR) > 0) {
             count = IMU_ERROR_COUNT;
-            switch(currentStage) {
+            switch (currentStage) {
                 case ON:
                 case OFF:
                     length = IMU_ERROR_LENGTH;
@@ -154,12 +148,12 @@ namespace LEDManager
                 case INTERVAL:
                     length = IMU_ERROR_INTERVAL;
                     break;
-                }
-            if(printStatus)
+            }
+            if (printStatus)
                 logger.debug("IMU ERROR");
-        } else if((currentStatus & LED_STATUS_WIFI_CONNECTING) > 0) {
+        } else if ((currentStatus & LED_STATUS_WIFI_CONNECTING) > 0) {
             count = WIFI_CONNECTING_COUNT;
-            switch(currentStage) {
+            switch (currentStage) {
                 case ON:
                 case OFF:
                     length = WIFI_CONNECTING_LENGTH;
@@ -170,12 +164,12 @@ namespace LEDManager
                 case INTERVAL:
                     length = WIFI_CONNECTING_INTERVAL;
                     break;
-                }
-            if(printStatus)
+            }
+            if (printStatus)
                 logger.debug("WIFI CONNECTING");
-        } else if((currentStatus & LED_STATUS_SERVER_CONNECTING) > 0) {
+        } else if ((currentStatus & LED_STATUS_SERVER_CONNECTING) > 0) {
             count = SERVER_CONNECTING_COUNT;
-            switch(currentStage) {
+            switch (currentStage) {
                 case ON:
                 case OFF:
                     length = SERVER_CONNECTING_LENGTH;
@@ -186,15 +180,15 @@ namespace LEDManager
                 case INTERVAL:
                     length = SERVER_CONNECTING_INTERVAL;
                     break;
-                }
-            if(printStatus)
+            }
+            if (printStatus)
                 logger.debug("SERVER CONNECTING");
         } else {
-            if(printStatus)
+            if (printStatus)
                 logger.debug("OK");
-            #if defined(LED_INTERVAL_STANDBUY) && LED_INTERVAL_STANDBUY > 0
-                count = 1;
-                switch(currentStage) {
+#if defined(LED_INTERVAL_STANDBUY) && LED_INTERVAL_STANDBUY > 0
+            count = 1;
+            switch (currentStage) {
                 case ON:
                 case OFF:
                     length = STANDBUY_LENGTH;
@@ -205,39 +199,39 @@ namespace LEDManager
                 case INTERVAL:
                     length = LED_INTERVAL_STANDBUY;
                     break;
-                }
-            #else
-                return;
-            #endif
+            }
+#else
+            return;
+#endif
         }
 
-        if(currentStage == OFF || timer + diff >= length) {
+        if (currentStage == OFF || timer + diff >= length) {
             timer = 0;
             // Advance stage
-            switch(currentStage) {
-            case OFF:
-                on(STATUS_LED);
-                currentStage = ON;
-                currentCount = 0;
-                break;
-            case ON:
-                off(STATUS_LED);
-                currentCount++;
-                if(currentCount >= count) {
+            switch (currentStage) {
+                case OFF:
+                    on(STATUS_LED);
+                    currentStage = ON;
                     currentCount = 0;
-                    currentStage = INTERVAL;
-                } else {
-                    currentStage = GAP;
-                }
-                break;
-            case GAP:
-            case INTERVAL:
-                on(STATUS_LED);
-                currentStage = ON;
-                break;
-                on(STATUS_LED);
-                currentStage = ON;
-                break;
+                    break;
+                case ON:
+                    off(STATUS_LED);
+                    currentCount++;
+                    if (currentCount >= count) {
+                        currentCount = 0;
+                        currentStage = INTERVAL;
+                    } else {
+                        currentStage = GAP;
+                    }
+                    break;
+                case GAP:
+                case INTERVAL:
+                    on(STATUS_LED);
+                    currentStage = ON;
+                    break;
+                    on(STATUS_LED);
+                    currentStage = ON;
+                    break;
             }
         } else {
             timer += diff;

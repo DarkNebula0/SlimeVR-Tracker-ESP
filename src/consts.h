@@ -64,11 +64,11 @@
 #endif
 
 #ifdef ESP8266
-  #define HARDWARE_MCU 1
+#define HARDWARE_MCU 1
 #elif defined(ESP32)
-  #define HARDWARE_MCU 2
+#define HARDWARE_MCU 2
 #else
-  #define HARDWARE_MCU 0
+#define HARDWARE_MCU 0
 #endif
 
 #endif // SLIMEVR_CONSTS_H_

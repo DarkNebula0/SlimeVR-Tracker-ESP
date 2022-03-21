@@ -26,20 +26,30 @@
 #include <ICM_20948.h>
 #include "sensor.h"
 #include <arduino-timer.h> // Used for periodically saving bias
+
 #ifdef ESP32
+
 #include <Preferences.h> // ICM bias saving. ESP8266 use eprom
+
 #endif
 
-class ICM20948Sensor : public Sensor
-{
+class ICM20948Sensor : public Sensor {
 public:
-    ICM20948Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("ICM20948Sensor", IMU_ICM20948, id, address, rotation) {}
+    ICM20948Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("ICM20948Sensor", IMU_ICM20948, id, address,
+                                                                         rotation) {}
+
     ~ICM20948Sensor() override = default;
+
     void motionSetup() override final;
+
     void motionLoop() override final;
+
     void sendData() override final;
+
     void startCalibration(int calibrationType) override final;
+
     void save_bias(bool repeat);
+
     void load_bias();
 
 private:

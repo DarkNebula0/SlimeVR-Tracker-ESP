@@ -24,7 +24,9 @@
 #include "globals.h"
 
 #ifdef IMU_MPU6050_RUNTIME_CALIBRATION
+
 #include "MPU6050_6Axis_MotionApps_V6_12.h"
+
 #else
 #include "MPU6050_6Axis_MotionApps20.h"
 #endif
@@ -36,13 +38,11 @@
 #include "configuration.h"
 #include "ledmgr.h"
 
-void MPU6050Sensor::motionSetup()
-{
+void MPU6050Sensor::motionSetup() {
     //DeviceConfig * const config = getConfigPtr();
 
     imu.initialize(addr);
-    if (!imu.testConnection())
-    {
+    if (!imu.testConnection()) {
         m_Logger.fatal("Can't connect to MPU6050 (0x%02x) at address 0x%02x", imu.getDeviceID(), addr);
         return;
     }
@@ -51,8 +51,7 @@ void MPU6050Sensor::motionSetup()
 
     devStatus = imu.dmpInitialize();
 
-    if (devStatus == 0)
-    {
+    if (devStatus == 0) {
 #ifdef IMU_MPU6050_RUNTIME_CALIBRATION
         // We don't have to manually calibrate if we are using the dmp's automatic calibration
 #else  // IMU_MPU6050_RUNTIME_CALIBRATION
@@ -84,9 +83,7 @@ void MPU6050Sensor::motionSetup()
 
         working = true;
         configured = true;
-    }
-    else
-    {
+    } else {
         // ERROR!
         // 1 = initial memory load failed
         // 2 = DMP configuration updates failed
@@ -95,8 +92,7 @@ void MPU6050Sensor::motionSetup()
     }
 }
 
-void MPU6050Sensor::motionLoop()
-{
+void MPU6050Sensor::motionLoop() {
 #if ENABLE_INSPECTION
     {
         int16_t rX, rY, rZ, aX, aY, aZ;
@@ -110,8 +106,7 @@ void MPU6050Sensor::motionLoop()
     if (!dmpReady)
         return;
 
-    if (imu.dmpGetCurrentFIFOPacket(fifoBuffer))
-    {
+    if (imu.dmpGetCurrentFIFOPacket(fifoBuffer)) {
         imu.dmpGetQuaternion(&rawQuat, fifoBuffer);
         quaternion.set(-rawQuat.y, rawQuat.x, rawQuat.z, rawQuat.w);
         quaternion *= sensorOffset;
@@ -122,8 +117,7 @@ void MPU6050Sensor::motionLoop()
         }
 #endif
 
-        if (!OPTIMIZE_UPDATES || !lastQuatSent.equalsWithEpsilon(quaternion))
-        {
+        if (!OPTIMIZE_UPDATES || !lastQuatSent.equalsWithEpsilon(quaternion)) {
             newData = true;
             lastQuatSent = quaternion;
         }
@@ -133,17 +127,17 @@ void MPU6050Sensor::motionLoop()
 void MPU6050Sensor::startCalibration(int calibrationType) {
     LEDManager::on(CALIBRATING_LED);
 #ifdef IMU_MPU6050_RUNTIME_CALIBRATION
-    m_Logger.info("MPU is using automatic runtime calibration. Place down the device and it should automatically calibrate after a few seconds");
+    m_Logger.info(
+            "MPU is using automatic runtime calibration. Place down the device and it should automatically calibrate after a few seconds");
 
     // Lie to the server and say we've calibrated
-    switch (calibrationType)
-    {
-    case CALIBRATION_TYPE_INTERNAL_ACCEL:
-        Network::sendCalibrationFinished(CALIBRATION_TYPE_INTERNAL_ACCEL, 0);
-        break;
-    case CALIBRATION_TYPE_INTERNAL_GYRO:
-        Network::sendCalibrationFinished(CALIBRATION_TYPE_INTERNAL_ACCEL, 0);
-        break;
+    switch (calibrationType) {
+        case CALIBRATION_TYPE_INTERNAL_ACCEL:
+            Network::sendCalibrationFinished(CALIBRATION_TYPE_INTERNAL_ACCEL, 0);
+            break;
+        case CALIBRATION_TYPE_INTERNAL_GYRO:
+            Network::sendCalibrationFinished(CALIBRATION_TYPE_INTERNAL_ACCEL, 0);
+            break;
     }
     LEDManager::off(CALIBRATING_LED);
 

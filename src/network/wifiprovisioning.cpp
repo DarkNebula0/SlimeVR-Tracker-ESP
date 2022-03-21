@@ -36,7 +36,7 @@ void WiFiNetwork::upkeepProvisioning() {
 }
 
 void WiFiNetwork::startProvisioning() {
-    if(WiFi.beginSmartConfig()) {
+    if (WiFi.beginSmartConfig()) {
         provisioning = true;
         wifiProvisioningLogger.info("SmartConfig started");
     }

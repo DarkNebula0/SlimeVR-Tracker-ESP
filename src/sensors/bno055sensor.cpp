@@ -28,8 +28,7 @@
 void BNO055Sensor::motionSetup() {
     imu = Adafruit_BNO055(sensorId, addr);
     delay(3000);
-    if (!imu.begin(Adafruit_BNO055::OPERATION_MODE_IMUPLUS))
-    {
+    if (!imu.begin(Adafruit_BNO055::OPERATION_MODE_IMUPLUS)) {
         m_Logger.fatal("Can't connect to BNO055 at address 0x%02x", addr);
         LEDManager::signalAssert();
         return;
@@ -65,7 +64,7 @@ void BNO055Sensor::motionLoop() {
     }
 #endif
 
-    if(!OPTIMIZE_UPDATES || !lastQuatSent.equalsWithEpsilon(quaternion)) {
+    if (!OPTIMIZE_UPDATES || !lastQuatSent.equalsWithEpsilon(quaternion)) {
         newData = true;
         lastQuatSent = quaternion;
     }

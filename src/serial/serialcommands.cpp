@@ -34,9 +34,9 @@ namespace SerialCommands {
     CmdParser cmdParser;
     CmdBuffer<64> cmdBuffer;
 
-    void cmdSet(CmdParser * parser) {
-        if(parser->getParamCount() != 1 && parser->equalCmdParam(1, "WIFI")  ) {
-            if(parser->getParamCount() < 3) {
+    void cmdSet(CmdParser *parser) {
+        if (parser->getParamCount() != 1 && parser->equalCmdParam(1, "WIFI")) {
+            if (parser->getParamCount() < 3) {
                 logger.error("CMD SET WIFI ERROR: Too few arguments");
                 logger.info("Syntax: SET WIFI \"<SSID>\" \"<PASSWORD>\"");
             } else {
@@ -48,40 +48,40 @@ namespace SerialCommands {
         }
     }
 
-    void cmdGet(CmdParser * parser) {
-        if(parser->getParamCount() != 1 && parser->equalCmdParam(1, "INFO")  ) {
+    void cmdGet(CmdParser *parser) {
+        if (parser->getParamCount() != 1 && parser->equalCmdParam(1, "INFO")) {
             logger.info(
-                "SlimeVR Tracker, board: %d, hardware: %d, build: %d, firmware: %s, address: %s",
-                BOARD,
-                HARDWARE_MCU,
-                FIRMWARE_BUILD_NUMBER,
-                FIRMWARE_VERSION,
-                WiFiNetwork::getAddress().toString().c_str()
+                    "SlimeVR Tracker, board: %d, hardware: %d, build: %d, firmware: %s, address: %s",
+                    BOARD,
+                    HARDWARE_MCU,
+                    FIRMWARE_BUILD_NUMBER,
+                    FIRMWARE_VERSION,
+                    WiFiNetwork::getAddress().toString().c_str()
             );
             // TODO Print sensors number and types
         }
     }
 
-    void cmdReport(CmdParser * parser) {
+    void cmdReport(CmdParser *parser) {
         // TODO Health and status report
     }
 
-    void cmdReboot(CmdParser * parser) {
+    void cmdReboot(CmdParser *parser) {
         logger.info("REBOOT");
         ESP.restart();
     }
 
-    void cmdFactoryReset(CmdParser * parser) {
+    void cmdFactoryReset(CmdParser *parser) {
         logger.info("FACTORY RESET");
         for (int i = 0; i <= 4096; i++) // Clear EEPROM
             EEPROM.write(i, 0xFF);
         EEPROM.commit();
         WiFi.disconnect(true); // Clear WiFi credentials
-        #if ESP8266
+#if ESP8266
         ESP.eraseConfig(); // Clear ESP config
-        #else
+#else
         // TODO: Implement eraseConfig for other boards
-        #endif
+#endif
         delay(3000);
         ESP.restart();
     }

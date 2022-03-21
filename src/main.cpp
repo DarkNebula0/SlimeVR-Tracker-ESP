@@ -42,8 +42,7 @@ SlimeVR::Sensors::SensorManager sensorManager;
 unsigned long loopTime = 0;
 BatteryMonitor battery;
 
-void setup()
-{
+void setup() {
     Serial.begin(serialBaudRate);
     Serial.println();
     Serial.println();
@@ -76,9 +75,9 @@ void setup()
     getConfigPtr();
     // Wait for IMU to boot
     delay(500);
-    
+
     sensorManager.setup();
-    
+
     Network::setUp();
     OTA::otaSetup(otaPassword);
     battery.Setup();
@@ -86,8 +85,7 @@ void setup()
     loopTime = micros();
 }
 
-void loop()
-{
+void loop() {
     LEDManager::ledStatusUpdate();
     SerialCommands::update();
     OTA::otaUpdate();
@@ -97,17 +95,15 @@ void loop()
 
 #ifdef TARGET_LOOPTIME_MICROS
     long elapsed = (micros() - loopTime);
-    if (elapsed < TARGET_LOOPTIME_MICROS)
-    {
+    if (elapsed < TARGET_LOOPTIME_MICROS) {
         long sleepus = TARGET_LOOPTIME_MICROS - elapsed - 100;//µs to sleep
         long sleepms = sleepus / 1000;//ms to sleep
-        if(sleepms > 0) // if >= 1 ms
+        if (sleepms > 0) // if >= 1 ms
         {
             delay(sleepms); // sleep ms = save power
             sleepus -= sleepms * 1000;
         }
-        if (sleepus > 100)
-        {
+        if (sleepus > 100) {
             delayMicroseconds(sleepus);
         }
     }

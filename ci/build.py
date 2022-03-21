@@ -18,7 +18,7 @@ class Board(Enum):
 
 
 class DeviceConfiguration:
-    def __init__(self,  platform: str, board: Board, platformio_board: str) -> None:
+    def __init__(self, platform: str, board: Board, platformio_board: str) -> None:
         self.platform = platform
         self.board = board
         self.platformio_board = platformio_board

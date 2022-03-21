@@ -43,8 +43,10 @@ struct DeviceConfig {
     int deviceMode;
 };
 
-DeviceConfig * const getConfigPtr();
-void setConfig(const DeviceConfig & config);
+DeviceConfig *const getConfigPtr();
+
+void setConfig(const DeviceConfig &config);
+
 void saveConfig();
 
 #endif // SLIMEVR_CONFIG_H_

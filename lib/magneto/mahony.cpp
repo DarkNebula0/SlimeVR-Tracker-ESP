@@ -36,8 +36,8 @@ static float ix = 0.0f, iy = 0.0f, iz = 0.0f;  //integral feedback terms
 // reference vectors are Up (Acc) and West (Acc cross Mag)
 // sjr 12/2020
 // gx, gy, gz must be in units of radians/second
-void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz, float deltat)
-{
+void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, float gy, float gz, float mx, float my,
+                            float mz, float deltat) {
     // short name local variable for readability
     float q1 = q[0], q2 = q[1], q3 = q[2], q4 = q[3];
     float norm;
@@ -72,8 +72,7 @@ void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, 
 
     // Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
     tmp = ax * ax + ay * ay + az * az;
-    if (tmp > 0.0f)
-    {
+    if (tmp > 0.0f) {
         // Normalise accelerometer (assumed to measure the direction of gravity in body frame)
         norm = invSqrt(tmp);
         ax *= norm;
@@ -144,8 +143,7 @@ void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, 
     q[3] = q4 * norm;
 }
 
-void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, float gy, float gz, float deltat)
-{
+void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, float gy, float gz, float deltat) {
     // short name local variable for readability
     float q1 = q[0], q2 = q[1], q3 = q[2], q4 = q[3];
     float norm;
@@ -155,8 +153,7 @@ void mahonyQuaternionUpdate(float q[4], float ax, float ay, float az, float gx, 
 
     // Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
     float tmp = ax * ax + ay * ay + az * az;
-    if (tmp > 0.0f)
-    {
+    if (tmp > 0.0f) {
         // Normalise accelerometer (assumed to measure the direction of gravity in body frame)
         norm = invSqrt(tmp);
         ax *= norm;

@@ -26,6 +26,7 @@
 
 namespace SerialCommands {
     void setUp();
+
     void update();
 }
 

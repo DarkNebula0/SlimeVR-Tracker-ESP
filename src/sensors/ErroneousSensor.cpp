@@ -24,17 +24,13 @@
 #include "ErroneousSensor.h"
 #include "network/network.h"
 
-namespace SlimeVR
-{
-    namespace Sensors
-    {
-        void ErroneousSensor::motionSetup()
-        {
+namespace SlimeVR {
+    namespace Sensors {
+        void ErroneousSensor::motionSetup() {
             m_Logger.error("IMU of type %s failed to initialize", getIMUNameByType(m_ExpectedType));
         }
 
-        uint8_t ErroneousSensor::getSensorState()
-        {
+        uint8_t ErroneousSensor::getSensorState() {
             return SENSOR_ERROR;
         };
     }

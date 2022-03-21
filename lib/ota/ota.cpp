@@ -26,8 +26,8 @@
 const unsigned long bootTime = millis();
 bool enabled = true;
 
-void OTA::otaSetup(const char * const otaPassword) {
-    if(otaPassword[0] == '\0') {
+void OTA::otaSetup(const char *const otaPassword) {
+    if (otaPassword[0] == '\0') {
         enabled = false;
         return; // No password set up, disable OTA
     }
@@ -63,8 +63,8 @@ void OTA::otaSetup(const char * const otaPassword) {
 }
 
 void OTA::otaUpdate() {
-    if(enabled) {
-        if(bootTime + 60000 < millis()) {
+    if (enabled) {
+        if (bootTime + 60000 < millis()) {
             // Disable OTA 60 seconds after boot as protection measure
             enabled = false;
             Serial.println("[NOTICE] OTA updates disabled by timeout, this is not an error");

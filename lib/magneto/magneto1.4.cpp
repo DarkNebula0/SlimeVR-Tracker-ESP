@@ -1,15 +1,13 @@
 #include "magneto1.4.h"
 
 //Magneto 1.3 4/24/2020
-void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
-{
+void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3]) {
     double xs = 0, xave = 0;
 
     //
     // calculate mean (norm) and standard deviation for possible outlier rejection
     //
-    for (int i = 0; i < sampleCount; i++)
-    {
+    for (int i = 0; i < sampleCount; i++) {
         double x = buf[i * 3 + 0];
         double y = buf[i * 3 + 1];
         double z = buf[i * 3 + 2];
@@ -22,8 +20,8 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 
     // third time through!
     // allocate array space for accepted measurements
-    double* D = new double[10 * sampleCount];
-    double* raw = new double[3 * sampleCount];
+    double *D = new double[10 * sampleCount];
+    double *raw = new double[3 * sampleCount];
 
     {
         // summarize statistics, give user opportunity to reject outlying measurements
@@ -31,8 +29,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 
         int j = 0;  //array index for good measurements
         // printf("\r\nAccepted measurements (file index, internal index, ...)\r\n");
-        for (int i = 0; i < sampleCount; i++)
-        {
+        for (int i = 0; i < sampleCount; i++) {
             double x = buf[i * 3 + 0];
             double y = buf[i * 3 + 1];
             double z = buf[i * 3 + 2];
@@ -69,17 +66,17 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
     double hm = xave;
 
     // allocate memory for matrix S
-    double* S = new double[10 * 10];
+    double *S = new double[10 * 10];
     Multiply_Self_Transpose(S, D, 10, sampleCount);
     delete[] D;
 
-    double* S11 = new double[6 * 6];
+    double *S11 = new double[6 * 6];
     Get_Submatrix(S11, 6, 6, S, 10, 0, 0);
-    double* S12 = new double[6 * 4];
+    double *S12 = new double[6 * 4];
     Get_Submatrix(S12, 6, 4, S, 10, 0, 6);
-    double* S12t = new double[4 * 6];
+    double *S12t = new double[4 * 6];
     Get_Submatrix(S12t, 4, 6, S, 10, 6, 0);
-    double* S22 = new double[4 * 4];
+    double *S22 = new double[4 * 4];
     Get_Submatrix(S22, 4, 4, S, 10, 6, 6);
     delete[] S;
 
@@ -87,38 +84,38 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
     Choleski_LU_Inverse(S22, 4);
 
     // Calculate S22a = S22 * S12t   4*6 = 4x4 * 4x6   C = AB
-    double* S22a = new double[4 * 6];
+    double *S22a = new double[4 * 6];
     Multiply_Matrices(S22a, S22, 4, 4, S12t, 6);
     delete[] S22;
     delete[] S12t;
 
     // Then calculate S22b = S12 * S22a      ( 6x6 = 6x4 * 4x6)
-    double* S22b = new double[6 * 6];
+    double *S22b = new double[6 * 6];
     Multiply_Matrices(S22b, S12, 6, 4, S22a, 6);
     delete[] S12;
 
     // Calculate SS = S11 - S22b
-    double* SS = new double[6 * 6];
+    double *SS = new double[6 * 6];
     for (int i = 0; i < 36; i++)
         SS[i] = S11[i] - S22b[i];
     delete[] S11;
     delete[] S22b;
 
     // Create pre-inverted constraint matrix C
-    double* C = new double[6 * 6]{
-        0.0, 0.5, 0.5,  0.0,  0.0,  0.0,
-        0.5, 0.0, 0.5,  0.0,  0.0,  0.0,
-        0.5, 0.5, 0.0,  0.0,  0.0,  0.0,
-        0.0, 0.0, 0.0, -0.25, 0.0,  0.0,
-        0.0, 0.0, 0.0,  0.0, -0.25, 0.0,
-        0.0, 0.0, 0.0,  0.0,  0.0, -0.25
+    double *C = new double[6 * 6]{
+            0.0, 0.5, 0.5, 0.0, 0.0, 0.0,
+            0.5, 0.0, 0.5, 0.0, 0.0, 0.0,
+            0.5, 0.5, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, -0.25, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, -0.25, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, -0.25
     };
-    double* E = new double[6 * 6];
+    double *E = new double[6 * 6];
     Multiply_Matrices(E, C, 6, 6, SS, 6);
     delete[] C;
     delete[] SS;
 
-    double* SSS = new double[6 * 6];
+    double *SSS = new double[6 * 6];
     Hessenberg_Form_Elementary(E, SSS, 6);
 
     int index = 0;
@@ -130,17 +127,15 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
         delete[] E;
 
         double maxval = eigen_real[0];
-        for (int i = 1; i < 6; i++)
-        {
-            if (eigen_real[i] > maxval)
-            {
+        for (int i = 1; i < 6; i++) {
+            if (eigen_real[i] > maxval) {
                 maxval = eigen_real[i];
                 index = i;
             }
         }
     }
 
-    double* v1 = new double[6];
+    double *v1 = new double[6];
     v1[0] = SSS[index];
     v1[1] = SSS[index + 6];
     v1[2] = SSS[index + 12];
@@ -151,7 +146,8 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 
     // normalize v1
     {
-        double norm = sqrt(v1[0] * v1[0] + v1[1] * v1[1] + v1[2] * v1[2] + v1[3] * v1[3] + v1[4] * v1[4] + v1[5] * v1[5]);
+        double norm = sqrt(
+                v1[0] * v1[0] + v1[1] * v1[1] + v1[2] * v1[2] + v1[3] * v1[3] + v1[4] * v1[4] + v1[5] * v1[5]);
         v1[0] /= norm;
         v1[1] /= norm;
         v1[2] /= norm;
@@ -160,8 +156,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
         v1[5] /= norm;
     }
 
-    if (v1[0] < 0.0)
-    {
+    if (v1[0] < 0.0) {
         v1[0] = -v1[0];
         v1[1] = -v1[1];
         v1[2] = -v1[2];
@@ -171,12 +166,12 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
     }
 
     // Calculate v2 = S22a * v1      ( 4x1 = 4x6 * 6x1)
-    double* v2 = new double[4];
+    double *v2 = new double[4];
     Multiply_Matrices(v2, S22a, 4, 6, v1, 1);
     delete[] S22a;
 
-    double* U = new double[3];
-    double* Q = new double[3 * 3];
+    double *U = new double[3];
+    double *Q = new double[3 * 3];
     double J;
     {
         double v[10];
@@ -210,7 +205,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
         J = v[9];
     }
 
-    double* B = new double[3];
+    double *B = new double[3];
     {
         double Q_1[3 * 3];
         for (int i = 0; i < 9; i++)
@@ -237,10 +232,10 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
     }
 
     // Calculate SQ, the square root of matrix Q
-    double* SSSS = new double[3 * 3];
+    double *SSSS = new double[3 * 3];
     Hessenberg_Form_Elementary(Q, SSSS, 3);
 
-    double* Dz = new double[3 * 3]{0};
+    double *Dz = new double[3 * 3]{0};
     {
         double eigen_real3[3];
         double eigen_imag3[3];
@@ -268,7 +263,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
         SSSS[8] /= norm;
     }
 
-    double* SQ = new double[3 * 3];
+    double *SQ = new double[3 * 3];
     {
         double vdz[3 * 3];
         Multiply_Matrices(vdz, SSSS, 3, 3, Dz, 3);
@@ -280,7 +275,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 
 
     // hm = 0.569;
-    double* A_1 = new double[3 * 3];
+    double *A_1 = new double[3 * 3];
     // Calculate hmb = sqrt(btqb - J).
     double hmb = sqrt(btqb - J);
 
@@ -292,8 +287,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
         BAinv[0][i] = B[i];
     delete[] B;
 
-    for (int i = 0; i < 3; i++)
-    {
+    for (int i = 0; i < 3; i++) {
         BAinv[i + 1][0] = A_1[i * 3];
         BAinv[i + 1][1] = A_1[i * 3 + 1];
         BAinv[i + 1][2] = A_1[i * 3 + 2];
@@ -304,7 +298,7 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 
 // Place here the source code of all the routines which have been forward-declared, available at
 // http://www.mymathlib.com/matrices/
- ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // File: copy_vector.c                                                        //
 // Routine(s):                                                                //
 //    Copy_Vector                                                             //
@@ -335,10 +329,10 @@ void CalculateCalibration(float *buf, int sampleCount, float BAinv[4][3])
 //     Copy_Vector(vd, v, N);                                                 //
 //     printf(" Vector vd is \n");                                            //
 ////////////////////////////////////////////////////////////////////////////////
-void Copy_Vector(double* d, double* s, int n)
-{
+void Copy_Vector(double *d, double *s, int n) {
     memcpy(d, s, sizeof(double) * n);
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: multiply_self_transpose.c                                            //
 // Routine(s):                                                                //
@@ -374,15 +368,14 @@ void Copy_Vector(double* d, double* s, int n)
 //     Multiply_Self_Transpose(&C[0][0], &A[0][0], M, N);                     //
 //     printf("The matrix C = AA ' is \n"); ...                               //
 ////////////////////////////////////////////////////////////////////////////////
-void Multiply_Self_Transpose(double* C, double* A, int nrows, int ncols)
-{
+void Multiply_Self_Transpose(double *C, double *A, int nrows, int ncols) {
     int i, j, k;
-    double* pA = nullptr;
-    double* p_A = A;
-    double* pB;
-    double* pCdiag = C;
-    double* pC = C;
-    double* pCt;
+    double *pA = nullptr;
+    double *p_A = A;
+    double *pB;
+    double *pCdiag = C;
+    double *pC = C;
+    double *pCt;
 
     for (i = 0; i < nrows; pCdiag += nrows + 1, p_A = pA, i++) {
         pC = pCdiag;
@@ -439,9 +432,8 @@ void Multiply_Self_Transpose(double* C, double* A, int nrows, int ncols)
 //     printf("The submatrix B is \n"); ... }                                 //
 ////////////////////////////////////////////////////////////////////////////////
 
-void Get_Submatrix(double* S, int mrows, int mcols,
-    double* A, int ncols, int row, int col)
-{
+void Get_Submatrix(double *S, int mrows, int mcols,
+                   double *A, int ncols, int row, int col) {
     int number_of_bytes = sizeof(double) * mcols;
 
     for (A += row * ncols + col; mrows > 0; A += ncols, S += mcols, mrows--)
@@ -505,13 +497,12 @@ void Get_Submatrix(double* S, int mrows, int mcols,
 //           ...                                                              //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Choleski_LU_Decomposition(double* A, int n)
-{
+int Choleski_LU_Decomposition(double *A, int n) {
     int i, k, p;
-    double* p_Lk0;                   // pointer to L[k][0]
-    double* p_Lkp;                   // pointer to L[k][p]
-    double* p_Lkk;                   // pointer to diagonal element on row k.
-    double* p_Li0;                   // pointer to L[i][0]
+    double *p_Lk0;                   // pointer to L[k][0]
+    double *p_Lkp;                   // pointer to L[k][p]
+    double *p_Lkk;                   // pointer to diagonal element on row k.
+    double *p_Li0;                   // pointer to L[i][0]
     double reciprocal;
 
     for (k = 0, p_Lk0 = A; k < n; p_Lk0 += n, k++) {
@@ -592,8 +583,7 @@ int Choleski_LU_Decomposition(double* A, int n)
 //     }                                                                      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Choleski_LU_Solve(double* LU, double B[], double x[], int n)
-{
+int Choleski_LU_Solve(double *LU, double B[], double x[], int n) {
 
     //         Solve the linear equation Ly = B for y, where L is a lower
     //         triangular matrix.
@@ -644,10 +634,9 @@ int Choleski_LU_Solve(double* LU, double B[], double x[], int n)
 //     }                                                                      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Choleski_LU_Inverse(double* LU, int n)
-{
+int Choleski_LU_Inverse(double *LU, int n) {
     int i, j, k;
-    double* p_i, * p_j, * p_k;
+    double *p_i, *p_j, *p_k;
     double sum;
 
     if (Lower_Triangular_Inverse(LU, n) < 0) return -1;
@@ -666,6 +655,7 @@ int Choleski_LU_Inverse(double* LU, int n)
 
     return 0;
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: multiply_matrices.c                                                  //
 // Routine(s):                                                                //
@@ -705,11 +695,10 @@ int Choleski_LU_Inverse(double* LU, int n)
 //     Multiply_Matrices(&C[0][0], &A[0][0], M, N, &B[0][0], NB);             //
 //     printf("The matrix C is \n"); ...                                      //
 ////////////////////////////////////////////////////////////////////////////////
-void Multiply_Matrices(double* C, double* A, int nrows, int ncols,
-    double* B, int mcols)
-{
-    double* pB;
-    double* p_B;
+void Multiply_Matrices(double *C, double *A, int nrows, int ncols,
+                       double *B, int mcols) {
+    double *pB;
+    double *p_B;
     int i, j, k;
 
     for (i = 0; i < nrows; A += ncols, i++)
@@ -720,6 +709,7 @@ void Multiply_Matrices(double* C, double* A, int nrows, int ncols,
                 *C += *(A + k) * *pB;
         }
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: identity_matrix.c                                                    //
 // Routine(s):                                                                //
@@ -746,8 +736,7 @@ void Multiply_Matrices(double* C, double* A, int nrows, int ncols,
 //     Identity_Matrix(&A[0][0], N);                                          //
 //     printf("The matrix A is \n"); ...                                      //
 ////////////////////////////////////////////////////////////////////////////////
-void Identity_Matrix(double* A, int n)
-{
+void Identity_Matrix(double *A, int n) {
     int i, j;
 
     for (i = 0; i < n - 1; i++) {
@@ -808,27 +797,35 @@ void Identity_Matrix(double* A, int n)
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Hessenberg_Form_Elementary(double* A, double* S, int n)
-{
+int Hessenberg_Form_Elementary(double *A, double *S, int n) {
     int i, j, col, row;
-    int* perm;
-    double* p_row, * pS_row;
+    int *perm;
+    double *p_row, *pS_row;
     double max;
     double s;
-    double* pA, * pB, * pC, * pS;
+    double *pA, *pB, *pC, *pS;
 
     // n x n matrices for which n <= 2 are already in Hessenberg form
 
-    if (n <= 1) { *S = 1.0; return 0; }
-    if (n == 2) { *S++ = 1.0; *S++ = 0.0; *S++ = 1.0; *S = 0.0; return 0; }
+    if (n <= 1) {
+        *S = 1.0;
+        return 0;
+    }
+    if (n == 2) {
+        *S++ = 1.0;
+        *S++ = 0.0;
+        *S++ = 1.0;
+        *S = 0.0;
+        return 0;
+    }
 
     // Allocate working memory
 
-    perm = (int*)malloc(n * sizeof(int));
+    perm = (int *) malloc(n * sizeof(int));
     if (perm == NULL) return -1;             // not enough memory
 
-            // For each column use Elementary transformations
-            //   to zero the entries below the subdiagonal.
+    // For each column use Elementary transformations
+    //   to zero the entries below the subdiagonal.
 
     p_row = A + n;
     pS_row = S + n;
@@ -840,7 +837,10 @@ int Hessenberg_Form_Elementary(double* A, double* S, int n)
         row = col + 1;
         perm[row] = row;
         for (pA = p_row + col, max = 0.0, i = row; i < n; pA += n, i++)
-            if (fabs(*pA) > max) { perm[row] = i; max = fabs(*pA); }
+            if (fabs(*pA) > max) {
+                perm[row] = i;
+                max = fabs(*pA);
+            }
 
         // If perm[row] != row, then interchange row "row" and row
         // perm[row] and interchange column "row" and column perm[row].
@@ -901,11 +901,10 @@ int Hessenberg_Form_Elementary(double* A, double* S, int n)
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Hessenberg_Elementary_Transform(double* H, double* S, int perm[],
-    int n)
-{
+void Hessenberg_Elementary_Transform(double *H, double *S, int perm[],
+                                     int n) {
     int i, j;
-    double* pS, * pH;
+    double *pS, *pH;
 
     Identity_Matrix(S, n);
     for (i = n - 2; i >= 1; i--) {
@@ -994,15 +993,14 @@ void Hessenberg_Elementary_Transform(double* H, double* S, int perm[],
 //     if (k < 0) {printf("Failed"); exit(1);}                                //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int QR_Hessenberg_Matrix(double* H, double* S, double eigen_real[],
-    double eigen_imag[], int n, int max_iteration_count)
-{
+int QR_Hessenberg_Matrix(double *H, double *S, double eigen_real[],
+                         double eigen_imag[], int n, int max_iteration_count) {
     int i;
     int row;
     int iteration;
     int found_eigenvalue;
     double shift = 0.0;
-    double* pH;
+    double *pH;
 
     for (row = n - 1; row >= 0; row--) {
         found_eigenvalue = 0;
@@ -1012,7 +1010,8 @@ int QR_Hessenberg_Matrix(double* H, double* S, double eigen_real[],
 
             for (i = row, pH = H + row * n; i > 0; i--, pH -= n)
                 if (fabs(*(pH + i - 1)) <= DBL_EPSILON *
-                    (fabs(*(pH - n + i - 1)) + fabs(*(pH + i)))) break;
+                                           (fabs(*(pH - n + i - 1)) + fabs(*(pH + i))))
+                    break;
 
             // If the subdiagonal element on row "row" is small, then
             // that row element is an eigenvalue.  If the subdiagonal
@@ -1022,17 +1021,17 @@ int QR_Hessenberg_Matrix(double* H, double* S, double eigen_real[],
             // iteration.
 
             switch (row - i) {
-            case 0: // One real eigenvalue
-                One_Real_Eigenvalue(pH, eigen_real, eigen_imag, i, shift);
-                found_eigenvalue = 1;
-                break;
-            case 1: // Either two real eigenvalues or a complex pair
-                row--;
-                Two_Eigenvalues(H, S, eigen_real, eigen_imag, n, row, shift);
-                found_eigenvalue = 1;
-                break;
-            default:
-                Double_QR_Iteration(H, S, i, row, n, &shift, iteration);
+                case 0: // One real eigenvalue
+                    One_Real_Eigenvalue(pH, eigen_real, eigen_imag, i, shift);
+                    found_eigenvalue = 1;
+                    break;
+                case 1: // Either two real eigenvalues or a complex pair
+                    row--;
+                    Two_Eigenvalues(H, S, eigen_real, eigen_imag, n, row, shift);
+                    found_eigenvalue = 1;
+                    break;
+                default:
+                    Double_QR_Iteration(H, S, i, row, n, &shift, iteration);
             }
             if (found_eigenvalue) break;
         }
@@ -1064,8 +1063,7 @@ int QR_Hessenberg_Matrix(double* H, double* S, double eigen_real[],
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
 void One_Real_Eigenvalue(double Hrow[], double eigen_real[],
-    double eigen_imag[], int row, double shift)
-{
+                         double eigen_imag[], int row, double shift) {
     Hrow[row] += shift;
     eigen_real[row] = Hrow[row];
     eigen_imag[row] = 0.0;
@@ -1112,13 +1110,12 @@ void One_Real_Eigenvalue(double Hrow[], double eigen_real[],
 //            the matrix H.                                                   //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Two_Eigenvalues(double* H, double* S, double eigen_real[],
-    double eigen_imag[], int n, int row, double shift)
-{
+void Two_Eigenvalues(double *H, double *S, double eigen_real[],
+                     double eigen_imag[], int n, int row, double shift) {
     double p, q, x, discriminant, r;
     double cos, sin;
-    double* Hrow = H + n * row;
-    double* Hnextrow = Hrow + n;
+    double *Hrow = H + n * row;
+    double *Hnextrow = Hrow + n;
     int nextrow = row + 1;
 
     p = 0.5 * (Hrow[row] - Hnextrow[nextrow]);
@@ -1139,8 +1136,7 @@ void Two_Eigenvalues(double* H, double* S, double eigen_real[],
         Update_Row(Hrow, cos, sin, n, row);
         Update_Column(H, cos, sin, n, row);
         Update_Transformation(S, cos, sin, n, row);
-    }
-    else {                             // pair of complex roots
+    } else {                             // pair of complex roots
         eigen_real[nextrow] = eigen_real[row] = Hnextrow[nextrow] + p;
         eigen_imag[row] = sqrt(fabs(discriminant));
         eigen_imag[nextrow] = -eigen_imag[row];
@@ -1174,10 +1170,9 @@ void Two_Eigenvalues(double* H, double* S, double eigen_real[],
 //            in Hessenberg form.                                             //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Update_Row(double* Hrow, double cos, double sin, int n, int row)
-{
+void Update_Row(double *Hrow, double cos, double sin, int n, int row) {
     double x;
-    double* Hnextrow = Hrow + n;
+    double *Hnextrow = Hrow + n;
     int i;
 
     for (i = row; i < n; i++) {
@@ -1213,8 +1208,7 @@ void Update_Row(double* Hrow, double cos, double sin, int n, int row)
 //            The left-most column of the matrix H to update.                 //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Update_Column(double* H, double cos, double sin, int n, int col)
-{
+void Update_Column(double *H, double cos, double sin, int n, int col) {
     double x;
     int i;
     int next_col = col + 1;
@@ -1252,9 +1246,8 @@ void Update_Column(double* H, double cos, double sin, int n, int col)
 //            The row to which the pointer Hrow[] points of the matrix H.     //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Update_Transformation(double* S, double cos, double sin,
-    int n, int k)
-{
+void Update_Transformation(double *S, double cos, double sin,
+                           int n, int k) {
     double x;
     int i;
     int k1 = k + 1;
@@ -1300,9 +1293,8 @@ void Update_Transformation(double* S, double cos, double sin,
 //            Current iteration count.                                        //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Double_QR_Iteration(double* H, double* S, int min_row, int max_row,
-    int n, double* shift, int iteration)
-{
+void Double_QR_Iteration(double *H, double *S, int min_row, int max_row,
+                         int n, double *shift, int iteration) {
     int k;
     double trace, det;
 
@@ -1348,11 +1340,10 @@ void Double_QR_Iteration(double* H, double* S, int min_row, int max_row,
 //            Current iteration count.                                        //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Product_and_Sum_of_Shifts(double* H, int n, int max_row,
-    double* shift, double* trace, double* det, int iteration)
-{
-    double* pH = H + max_row * n;
-    double* p_aux;
+void Product_and_Sum_of_Shifts(double *H, int n, int max_row,
+                               double *shift, double *trace, double *det, int iteration) {
+    double *pH = H + max_row * n;
+    double *p_aux;
     int i;
     int min_col = max_row - 1;
 
@@ -1364,8 +1355,7 @@ void Product_and_Sum_of_Shifts(double* H, int n, int max_row,
         *trace = fabs(pH[min_col]) + fabs(p_aux[min_col - 1]);
         *det = *trace * *trace;
         *trace *= 1.5;
-    }
-    else {
+    } else {
         p_aux = pH - n;
         *trace = p_aux[min_col] + pH[max_row];
         *det = p_aux[min_col] * pH[max_row] - p_aux[max_row] * pH[min_col];
@@ -1400,11 +1390,10 @@ void Product_and_Sum_of_Shifts(double* H, int n, int max_row,
 //     Row with negligible subdiagonal element or min_row if none found.      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Two_Consecutive_Small_Subdiagonal(double* H, int min_row,
-    int max_row, int n, double trace, double det)
-{
+int Two_Consecutive_Small_Subdiagonal(double *H, int min_row,
+                                      int max_row, int n, double trace, double det) {
     double x, y, z, s;
-    double* pH;
+    double *pH;
     int i, k;
 
     for (k = max_row - 2, pH = H + k * n; k >= min_row; pH -= n, k--) {
@@ -1418,7 +1407,8 @@ int Two_Consecutive_Small_Subdiagonal(double* H, int min_row,
         if (k == min_row) break;
         if ((fabs(pH[k - 1]) * (fabs(y) + fabs(z))) <=
             DBL_EPSILON * fabs(x) *
-            (fabs(pH[k - 1 - n]) + fabs(pH[k]) + fabs(pH[n + k + 1]))) break;
+            (fabs(pH[k - 1 - n]) + fabs(pH[k]) + fabs(pH[n + k + 1])))
+            break;
     }
     for (i = k + 2, pH = H + i * n; i <= max_row; pH += n, i++) pH[i - 2] = 0.0;
     for (i = k + 3, pH = H + i * n; i <= max_row; pH += n, i++) pH[i - 3] = 0.0;
@@ -1453,14 +1443,13 @@ int Two_Consecutive_Small_Subdiagonal(double* H, int min_row,
 //            The dimensions of H and S.                                      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Double_QR_Step(double* H, int min_row, int max_row, int min_col,
-    double trace, double det, double* S, int n)
-{
+void Double_QR_Step(double *H, int min_row, int max_row, int min_col,
+                    double trace, double det, double *S, int n) {
     double s, x, y, z;
     double a, b, c;
-    double* pH;
-    double* tH;
-    double* pS;
+    double *pH;
+    double *tH;
+    double *pS;
     int i, j, k;
     int last_test_row_col = max_row - 1;
 
@@ -1551,11 +1540,10 @@ void Double_QR_Step(double* H, int min_row, int max_row, int min_col,
 //            The dimension of H, eigen_real, and eigen_imag.                 //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void BackSubstitution(double* H, double eigen_real[],
-    double eigen_imag[], int n)
-{
+void BackSubstitution(double *H, double eigen_real[],
+                      double eigen_imag[], int n) {
     double zero_tolerance;
-    double* pH;
+    double *pH;
     int i, j, row;
 
     // Calculate the zero tolerance
@@ -1571,10 +1559,10 @@ void BackSubstitution(double* H, double eigen_real[],
     for (row = n - 1; row >= 0; row--) {
         if (eigen_imag[row] == 0.0)
             BackSubstitute_Real_Vector(H, eigen_real, eigen_imag, row,
-                zero_tolerance, n);
+                                       zero_tolerance, n);
         else if (eigen_imag[row] < 0.0)
             BackSubstitute_Complex_Vector(H, eigen_real, eigen_imag, row,
-                zero_tolerance, n);
+                                          zero_tolerance, n);
     }
 }
 
@@ -1599,11 +1587,10 @@ void BackSubstitution(double* H, double eigen_real[],
 //            The dimension of H, eigen_real, and eigen_imag.                 //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void BackSubstitute_Real_Vector(double* H, double eigen_real[],
-    double eigen_imag[], int row, double zero_tolerance, int n)
-{
-    double* pH;
-    double* pV;
+void BackSubstitute_Real_Vector(double *H, double eigen_real[],
+                                double eigen_imag[], int row, double zero_tolerance, int n) {
+    double *pH;
+    double *pV;
     double x;
     double u[4] = {0};
     double v[2] = {0};
@@ -1620,14 +1607,12 @@ void BackSubstitute_Real_Vector(double* H, double eigen_real[],
         if (eigen_imag[i] < 0.0) {
             u[3] = u[0];
             v[1] = v[0];
-        }
-        else {
+        } else {
             k = i;
             if (eigen_imag[i] == 0.0) {
                 if (u[0] != 0.0) pH[row] = -v[0] / u[0];
                 else pH[row] = -v[0] / zero_tolerance;
-            }
-            else {
+            } else {
                 u[1] = pH[i + 1];
                 u[2] = pH[n + i];
                 x = (eigen_real[i] - eigen_real[row]);
@@ -1664,11 +1649,10 @@ void BackSubstitute_Real_Vector(double* H, double eigen_real[],
 //            The dimension of H, eigen_real, and eigen_imag.                 //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void BackSubstitute_Complex_Vector(double* H, double eigen_real[],
-    double eigen_imag[], int row, double zero_tolerance, int n)
-{
-    double* pH;
-    double* pV;
+void BackSubstitute_Complex_Vector(double *H, double eigen_real[],
+                                   double eigen_imag[], int row, double zero_tolerance, int n) {
+    double *pH;
+    double *pV;
     double x, y;
     double u[4] = {0};
     double v[2] = {0};
@@ -1680,10 +1664,9 @@ void BackSubstitute_Complex_Vector(double* H, double eigen_real[],
     if (fabs(pH[k]) > fabs(pH[row - n])) {
         pH[k - n] = -(pH[row] - eigen_real[row]) / pH[k];
         pH[row - n] = -eigen_imag[row] / pH[k];
-    }
-    else
+    } else
         Complex_Division(-pH[row - n], 0.0,
-            pH[k - n] - eigen_real[row], eigen_imag[row], &pH[k - n], &pH[row - n]);
+                         pH[k - n] - eigen_real[row], eigen_imag[row], &pH[k - n], &pH[row - n]);
     pH[k] = 1.0;
     pH[row] = 0.0;
     for (i = row - 2, pH = H + n * i; i >= 0; pH -= n, i--) {
@@ -1699,14 +1682,12 @@ void BackSubstitute_Complex_Vector(double* H, double eigen_real[],
             u[3] = u[0];
             v[0] = w[0];
             v[1] = w[1];
-        }
-        else {
+        } else {
             k = i;
             if (eigen_imag[i] == 0.0) {
                 Complex_Division(-w[0], -w[1], u[0], eigen_imag[row], &pH[row - 1],
-                    &pH[row]);
-            }
-            else {
+                                 &pH[row]);
+            } else {
                 u[1] = pH[i + 1];
                 u[2] = pH[n + i];
                 x = eigen_real[i] - eigen_real[row];
@@ -1715,19 +1696,18 @@ void BackSubstitute_Complex_Vector(double* H, double eigen_real[],
                     - eigen_imag[row] * eigen_imag[row];
                 if (x == 0.0 && y == 0.0)
                     x = zero_tolerance * (fabs(u[0]) + fabs(u[1]) + fabs(u[2])
-                        + fabs(u[3]) + fabs(eigen_imag[row]));
+                                          + fabs(u[3]) + fabs(eigen_imag[row]));
                 Complex_Division(u[1] * v[0] - u[3] * w[0] + w[1] * eigen_imag[row],
-                    u[1] * v[1] - u[3] * w[1] - w[0] * eigen_imag[row],
-                    x, y, &pH[row - 1], &pH[row]);
+                                 u[1] * v[1] - u[3] * w[1] - w[0] * eigen_imag[row],
+                                 x, y, &pH[row - 1], &pH[row]);
                 if (fabs(u[1]) > (fabs(u[3]) + fabs(eigen_imag[row]))) {
                     pH[n + row - 1] = -w[0] - u[0] * pH[row - 1]
-                        + eigen_imag[row] * pH[row] / u[1];
+                                      + eigen_imag[row] * pH[row] / u[1];
                     pH[n + row] = -w[1] - u[0] * pH[row]
-                        - eigen_imag[row] * pH[row - 1] / u[1];
-                }
-                else {
+                                  - eigen_imag[row] * pH[row - 1] / u[1];
+                } else {
                     Complex_Division(-v[0] - u[2] * pH[row - 1], -v[1] - u[2] * pH[row],
-                        u[3], eigen_imag[row], &pH[n + row - 1], &pH[n + row]);
+                                     u[3], eigen_imag[row], &pH[n + row - 1], &pH[n + row]);
                 }
             }
         }
@@ -1754,11 +1734,10 @@ void BackSubstitute_Complex_Vector(double* H, double eigen_real[],
 //            The dimension of H, S, eigen_real, and eigen_imag.              //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-void Calculate_Eigenvectors(double* H, double* S, double eigen_real[],
-    double eigen_imag[], int n)
-{
-    double* pH;
-    double* pS;
+void Calculate_Eigenvectors(double *H, double *S, double eigen_real[],
+                            double eigen_imag[], int n) {
+    double *pH;
+    double *pS;
     double x, y;
     int i, j, k;
 
@@ -1774,8 +1753,7 @@ void Calculate_Eigenvectors(double* H, double* S, double eigen_real[],
                 pS[k - 1] = x;
                 pS[k] = y;
             }
-        }
-        else if (eigen_imag[k] == 0.0) {
+        } else if (eigen_imag[k] == 0.0) {
             for (i = 0, pS = S; i < n; i++, pS += n) {
                 x = 0.0;
                 for (j = 0, pH = H; j <= k; j++, pH += n)
@@ -1812,13 +1790,13 @@ void Calculate_Eigenvectors(double* H, double* S, double eigen_real[],
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
 void Complex_Division(double x, double y, double u, double v,
-    double* a, double* b)
-{
+                      double *a, double *b) {
     double q = u * u + v * v;
 
     *a = (x * u + y * v) / q;
     *b = (y * u - x * v) / q;
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: transpose_square_matrix.c                                            //
 // Routine(s):                                                                //
@@ -1846,9 +1824,8 @@ void Complex_Division(double x, double y, double u, double v,
 //     Transpose_Square_Matrix( &A[0][0], N);                                 //
 //     printf("The transpose of A is \n"); ...                                //
 ////////////////////////////////////////////////////////////////////////////////
-void Transpose_Square_Matrix(double* A, int n)
-{
-    double* pA, * pAt;
+void Transpose_Square_Matrix(double *A, int n) {
+    double *pA, *pAt;
     double temp;
     int i, j;
 
@@ -1862,6 +1839,7 @@ void Transpose_Square_Matrix(double* A, int n)
         }
     }
 }
+
 ///////////////////////////////////////////////////////////////////////////////
 // File: lower_triangular.c                                                   //
 // Routines:                                                                  //
@@ -1902,8 +1880,7 @@ void Transpose_Square_Matrix(double* A, int n)
 //           ...                                                              //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Lower_Triangular_Solve(double* L, double B[], double x[], int n)
-{
+int Lower_Triangular_Solve(double *L, double B[], double x[], int n) {
     int i, k;
 
     //         Solve the linear equation Lx = B for x, where L is a lower
@@ -1959,10 +1936,9 @@ int Lower_Triangular_Solve(double* L, double B[], double x[], int n)
 //     }                                                                      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Lower_Triangular_Inverse(double* L, int n)
-{
+int Lower_Triangular_Inverse(double *L, int n) {
     int i, j, k;
-    double* p_i, * p_j, * p_k;
+    double *p_i, *p_j, *p_k;
     double sum;
 
     //         Invert the diagonal elements of the lower triangular matrix L.
@@ -1985,6 +1961,7 @@ int Lower_Triangular_Inverse(double* L, int n)
 
     return 0;
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: upper_triangular.c                                                   //
 // Routines:                                                                  //
@@ -2026,8 +2003,7 @@ int Lower_Triangular_Inverse(double* L, int n)
 //           ...                                                              //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Upper_Triangular_Solve(double* U, double B[], double x[], int n)
-{
+int Upper_Triangular_Solve(double *U, double B[], double x[], int n) {
     int i, k;
 
     //         Solve the linear equation Ux = B for x, where U is an upper
@@ -2082,10 +2058,9 @@ int Upper_Triangular_Solve(double* U, double B[], double x[], int n)
 //     }                                                                      //
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
-int Upper_Triangular_Inverse(double* U, int n)
-{
+int Upper_Triangular_Inverse(double *U, int n) {
     int i, j, k;
-    double* p_i, * p_k;
+    double *p_i, *p_k;
     double sum;
 
     //         Invert the diagonal elements of the upper triangular matrix U.
@@ -2109,6 +2084,7 @@ int Upper_Triangular_Inverse(double* U, int n)
 
     return 0;
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: interchange_cols.c                                                   //
 // Routine(s):                                                                //
@@ -2145,10 +2121,9 @@ int Upper_Triangular_Inverse(double* U, int n)
 //        Interchange_Columns(&A[0][0], i, j, M, N);                          //
 //     printf("The matrix A is \n"); ...                                      //
 ////////////////////////////////////////////////////////////////////////////////
-void Interchange_Columns(double* A, int col1, int col2, int nrows, int ncols)
-{
+void Interchange_Columns(double *A, int col1, int col2, int nrows, int ncols) {
     int i;
-    double* pA1, * pA2;
+    double *pA1, *pA2;
     double temp;
 
     pA1 = A + col1;
@@ -2159,6 +2134,7 @@ void Interchange_Columns(double* A, int col1, int col2, int nrows, int ncols)
         *pA2 = temp;
     }
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // File: interchange_rows.c                                                   //
 // Routine(s):                                                                //
@@ -2191,10 +2167,9 @@ void Interchange_Columns(double* A, int col1, int col2, int nrows, int ncols)
 //        Interchange_Rows(&A[0][0], i, j, N);                                //
 //     printf("The matrix A is \n"); ...                                      //
 ////////////////////////////////////////////////////////////////////////////////
-void Interchange_Rows(double* A, int row1, int row2, int ncols)
-{
+void Interchange_Rows(double *A, int row1, int row2, int ncols) {
     int i;
-    double* pA1, * pA2;
+    double *pA1, *pA2;
     double temp;
 
     pA1 = A + row1 * ncols;

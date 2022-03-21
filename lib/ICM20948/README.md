@@ -1,12 +1,15 @@
 # SparkFun ICM-20948 Arduino Library
 
-This is the SparkFun library for the TDK InvenSense ICM-20948 Inertial Measurement Unit 9-Degree Of Freedom sensor as used on the [SparkFun 9DoF IMU Breakout - ICM-20948 (Qwiic)](https://www.sparkfun.com/products/15335).
+This is the SparkFun library for the TDK InvenSense ICM-20948 Inertial Measurement Unit 9-Degree Of Freedom sensor as
+used on the [SparkFun 9DoF IMU Breakout - ICM-20948 (Qwiic)](https://www.sparkfun.com/products/15335).
 
-Version 1.2 of the library includes support for the InvenSense Digital Motion Processor (DMP™). You can find further details in [DMP.md](./DMP.md).
+Version 1.2 of the library includes support for the InvenSense Digital Motion Processor (DMP™). You can find further
+details in [DMP.md](./DMP.md).
 
 ## Contributing
 
-If you would like to contribute to this library: please do, we truly appreciate it, but please follow [these guidelines](./CONTRIBUTING.md). Thanks!
+If you would like to contribute to this library: please do, we truly appreciate it, but please
+follow [these guidelines](./CONTRIBUTING.md). Thanks!
 
 ## Repository Contents
 
@@ -19,8 +22,10 @@ If you would like to contribute to this library: please do, we truly appreciate 
 
 ## Documentation
 
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-9dof-imu-icm-20948-breakout-hookup-guide)** - Basic hookup guide for the SparkFun 9DoF IMU Breakout.
-* **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-9dof-imu-icm-20948-breakout-hookup-guide)** - Basic
+  hookup guide for the SparkFun 9DoF IMU Breakout.
+* **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic
+  information on how to install an Arduino library.
 
 ## Products that use this Library
 

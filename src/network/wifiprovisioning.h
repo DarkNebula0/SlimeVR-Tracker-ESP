@@ -25,9 +25,13 @@
 
 namespace WiFiNetwork {
     void upkeepProvisioning();
+
     void startProvisioning();
+
     void stopProvisioning();
+
     bool isProvisioning();
+
     void provideNeighbours();
 }
 

@@ -32,22 +32,22 @@
 #include "logging/Logger.h"
 
 #if BATTERY_MONITOR == BAT_EXTERNAL
-    #ifndef PIN_BATTERY_LEVEL
-        #error Internal ADC enabled without pin! Please select a pin.
-    #endif
-    // Wemos D1 Mini has an internal Voltage Divider with R1=220K and R2=100K > this means, 3.3V analogRead input voltage results in 1023.0
-    // Wemos D1 Mini with Wemos Battery Shield v1.2.0 or higher: Battery Shield with J2 closed, has an additional 130K resistor. So the resulting Voltage Divider is R1=220K+100K=320K and R2=100K > this means, 4.5V analogRead input voltage results in 1023.0
-    // SlimeVR Board can handle max 5V > so analogRead of 5.0V input will result in 1023.0
-    #define batteryADCMultiplier 1.0 / 1023.0 * (320 + BATTERY_SHIELD_RESISTANCE) / 100
+#ifndef PIN_BATTERY_LEVEL
+#error Internal ADC enabled without pin! Please select a pin.
+#endif
+// Wemos D1 Mini has an internal Voltage Divider with R1=220K and R2=100K > this means, 3.3V analogRead input voltage results in 1023.0
+// Wemos D1 Mini with Wemos Battery Shield v1.2.0 or higher: Battery Shield with J2 closed, has an additional 130K resistor. So the resulting Voltage Divider is R1=220K+100K=320K and R2=100K > this means, 4.5V analogRead input voltage results in 1023.0
+// SlimeVR Board can handle max 5V > so analogRead of 5.0V input will result in 1023.0
+#define batteryADCMultiplier 1.0 / 1023.0 * (320 + BATTERY_SHIELD_RESISTANCE) / 100
 #elif BATTERY_MONITOR == BAT_MCP3021 || BATTERY_MONITOR == BAT_INTERNAL_MCP3021
-  // Default recommended resistors are 9.1k and 5.1k
-  #define batteryADCMultiplier 3.3 / 1023.0 * 14.2 / 9.1
+// Default recommended resistors are 9.1k and 5.1k
+#define batteryADCMultiplier 3.3 / 1023.0 * 14.2 / 9.1
 #endif
 
-class BatteryMonitor
-{
+class BatteryMonitor {
 public:
     void Setup();
+
     void Loop();
 
 private:

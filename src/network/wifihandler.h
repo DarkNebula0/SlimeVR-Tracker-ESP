@@ -24,17 +24,24 @@
 #define SLIMEVR_WIFI_H_
 
 #include "configuration.h"
+
 #ifdef ESP8266
-    #include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h>
 #else
-    #include <WiFi.h>
+
+#include <WiFi.h>
+
 #endif
 
 namespace WiFiNetwork {
     bool isConnected();
+
     void setUp();
+
     void upkeep();
-    void setWiFiCredentials(const char * SSID, const char * pass);
+
+    void setWiFiCredentials(const char *SSID, const char *pass);
+
     IPAddress getAddress();
 }
 

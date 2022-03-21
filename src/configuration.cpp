@@ -37,13 +37,10 @@ bool hasConfigStored() {
     return hasConfigStored;
 }
 
-DeviceConfig *const getConfigPtr()
-{
-    if (!configLoaded)
-    {
+DeviceConfig *const getConfigPtr() {
+    if (!configLoaded) {
         initializeConfig();
-        if (hasConfigStored())
-        {
+        if (hasConfigStored()) {
             EEPROM.get(1, config);
         }
         configLoaded = true;
@@ -51,7 +48,7 @@ DeviceConfig *const getConfigPtr()
     return &config;
 }
 
-void setConfig(const DeviceConfig & newConfig) {
+void setConfig(const DeviceConfig &newConfig) {
     config = newConfig;
     saveConfig();
 }

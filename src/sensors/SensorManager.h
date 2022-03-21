@@ -29,25 +29,25 @@
 #include "EmptySensor.h"
 #include "logging/Logger.h"
 
-namespace SlimeVR
-{
-    namespace Sensors
-    {
-        class SensorManager
-        {
+namespace SlimeVR {
+    namespace Sensors {
+        class SensorManager {
         public:
             SensorManager()
-                : m_Logger(SlimeVR::Logging::Logger("SensorManager")), m_Sensor1(new EmptySensor(0)), m_Sensor2(new EmptySensor(0)) {}
-            ~SensorManager()
-            {
+                    : m_Logger(SlimeVR::Logging::Logger("SensorManager")), m_Sensor1(new EmptySensor(0)),
+                      m_Sensor2(new EmptySensor(0)) {}
+
+            ~SensorManager() {
                 delete m_Sensor1;
                 delete m_Sensor2;
             }
 
             void setup();
+
             void update();
 
             Sensor *getFirst() { return m_Sensor1; };
+
             Sensor *getSecond() { return m_Sensor2; };
 
         private:

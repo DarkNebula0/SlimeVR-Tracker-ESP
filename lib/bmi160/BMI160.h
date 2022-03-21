@@ -301,9 +301,9 @@ typedef enum {
  * @see setFullScaleAccelRange()
  */
 typedef enum {
-    BMI160_ACCEL_RANGE_2G  = 0x03, /**<  +/-  2g range */
-    BMI160_ACCEL_RANGE_4G  = 0x05, /**<  +/-  4g range */
-    BMI160_ACCEL_RANGE_8G  = 0x08, /**<  +/-  8g range */
+    BMI160_ACCEL_RANGE_2G = 0x03, /**<  +/-  2g range */
+    BMI160_ACCEL_RANGE_4G = 0x05, /**<  +/-  4g range */
+    BMI160_ACCEL_RANGE_8G = 0x08, /**<  +/-  8g range */
     BMI160_ACCEL_RANGE_16G = 0x0C, /**<  +/- 16g range */
 } BMI160AccelRange;
 
@@ -398,7 +398,7 @@ typedef enum {
  * @see setZeroMotionDetectionDuration()
  */
 typedef enum {
-    BMI160_ZERO_MOTION_DURATION_1_28S   = 0x00, /**<   1.28 seconds */
+    BMI160_ZERO_MOTION_DURATION_1_28S = 0x00, /**<   1.28 seconds */
     BMI160_ZERO_MOTION_DURATION_2_56S,          /**<   2.56 seconds */
     BMI160_ZERO_MOTION_DURATION_3_84S,          /**<   3.84 seconds */
     BMI160_ZERO_MOTION_DURATION_5_12S,          /**<   5.12 seconds */
@@ -414,7 +414,7 @@ typedef enum {
     BMI160_ZERO_MOTION_DURATION_17_92S,         /**<  17.92 seconds */
     BMI160_ZERO_MOTION_DURATION_19_20S,         /**<  19.20 seconds */
     BMI160_ZERO_MOTION_DURATION_20_48S,         /**<  20.48 seconds */
-    BMI160_ZERO_MOTION_DURATION_25_60S  = 0x10, /**<  25.60 seconds */
+    BMI160_ZERO_MOTION_DURATION_25_60S = 0x10, /**<  25.60 seconds */
     BMI160_ZERO_MOTION_DURATION_30_72S,         /**<  30.72 seconds */
     BMI160_ZERO_MOTION_DURATION_35_84S,         /**<  35.84 seconds */
     BMI160_ZERO_MOTION_DURATION_40_96S,         /**<  40.96 seconds */
@@ -465,192 +465,300 @@ typedef enum {
 } BMI160ZeroMotionDuration;
 
 class BMI160 {
-    public:
-        BMI160();
-        void initialize(uint8_t addr);
-        bool testConnection();
+public:
+    BMI160();
 
-        uint8_t getGyroRate();
-        void setGyroRate(uint8_t rate);
+    void initialize(uint8_t addr);
 
-        uint8_t getAccelRate();
-        void setAccelRate(uint8_t rate);
+    bool testConnection();
 
-        uint8_t getGyroDLPFMode();
-        void setGyroDLPFMode(uint8_t bandwidth);
+    uint8_t getGyroRate();
 
-        uint8_t getAccelDLPFMode();
-        void setAccelDLPFMode(uint8_t bandwidth);
+    void setGyroRate(uint8_t rate);
 
-        uint8_t getFullScaleGyroRange();
-        void setFullScaleGyroRange(uint8_t range);
-        uint8_t getFullScaleAccelRange();
-        void setFullScaleAccelRange(uint8_t range);
+    uint8_t getAccelRate();
 
-        void autoCalibrateGyroOffset();
-        bool getGyroOffsetEnabled();
-        void setGyroOffsetEnabled(bool enabled);
+    void setAccelRate(uint8_t rate);
 
-        int16_t getXGyroOffset();
-        void setXGyroOffset(int16_t offset);
-        int16_t getYGyroOffset();
-        void setYGyroOffset(int16_t offset);
-        int16_t getZGyroOffset();
-        void setZGyroOffset(int16_t offset);
+    uint8_t getGyroDLPFMode();
 
-        void autoCalibrateXAccelOffset(int target);
-        void autoCalibrateYAccelOffset(int target);
-        void autoCalibrateZAccelOffset(int target);
-        bool getAccelOffsetEnabled();
-        void setAccelOffsetEnabled(bool enabled);
+    void setGyroDLPFMode(uint8_t bandwidth);
 
-        int8_t getXAccelOffset();
-        void setXAccelOffset(int8_t offset);
-        int8_t getYAccelOffset();
-        void setYAccelOffset(int8_t offset);
-        int8_t getZAccelOffset();
-        void setZAccelOffset(int8_t offset);
+    uint8_t getAccelDLPFMode();
 
-        uint8_t getFreefallDetectionThreshold();
-        void setFreefallDetectionThreshold(uint8_t threshold);
+    void setAccelDLPFMode(uint8_t bandwidth);
 
-        uint8_t getFreefallDetectionDuration();
-        void setFreefallDetectionDuration(uint8_t duration);
+    uint8_t getFullScaleGyroRange();
 
-        uint8_t getShockDetectionThreshold();
-        void setShockDetectionThreshold(uint8_t threshold);
+    void setFullScaleGyroRange(uint8_t range);
 
-        uint8_t getShockDetectionDuration();
-        void setShockDetectionDuration(uint8_t duration);
+    uint8_t getFullScaleAccelRange();
 
-        uint8_t getMotionDetectionThreshold();
-        void setMotionDetectionThreshold(uint8_t threshold);
+    void setFullScaleAccelRange(uint8_t range);
 
-        uint8_t getMotionDetectionDuration();
-        void setMotionDetectionDuration(uint8_t duration);
+    void autoCalibrateGyroOffset();
 
-        uint8_t getZeroMotionDetectionThreshold();
-        void setZeroMotionDetectionThreshold(uint8_t threshold);
+    bool getGyroOffsetEnabled();
 
-        uint8_t getZeroMotionDetectionDuration();
-        void setZeroMotionDetectionDuration(uint8_t duration);
+    void setGyroOffsetEnabled(bool enabled);
 
-        uint8_t getTapDetectionThreshold();
-        void setTapDetectionThreshold(uint8_t threshold);
+    int16_t getXGyroOffset();
 
-        bool getTapShockDuration();
-        void setTapShockDuration(bool duration);
+    void setXGyroOffset(int16_t offset);
 
-        bool getTapQuietDuration();
-        void setTapQuietDuration(bool duration);
+    int16_t getYGyroOffset();
 
-        uint8_t getDoubleTapDetectionDuration();
-        void setDoubleTapDetectionDuration(uint8_t duration);
+    void setYGyroOffset(int16_t offset);
 
-        uint8_t getStepDetectionMode();
-        void setStepDetectionMode(BMI160StepMode mode);
-        bool getStepCountEnabled();
-        void setStepCountEnabled(bool enabled);
-        uint16_t getStepCount();
-        void resetStepCount();
+    int16_t getZGyroOffset();
 
-        bool getIntFreefallEnabled();
-        void setIntFreefallEnabled(bool enabled);
-        bool getIntShockEnabled();
-        void setIntShockEnabled(bool enabled);
-        bool getIntStepEnabled();
-        void setIntStepEnabled(bool enabled);
-        bool getIntMotionEnabled();
-        void setIntMotionEnabled(bool enabled);
-        bool getIntZeroMotionEnabled();
-        void setIntZeroMotionEnabled(bool enabled);
-        bool getIntTapEnabled();
-        void setIntTapEnabled(bool enabled);
-        bool getIntDoubleTapEnabled();
-        void setIntDoubleTapEnabled(bool enabled);
+    void setZGyroOffset(int16_t offset);
 
-        bool getGyroFIFOEnabled();
-        void setGyroFIFOEnabled(bool enabled);
-        bool getAccelFIFOEnabled();
-        void setAccelFIFOEnabled(bool enabled);
+    void autoCalibrateXAccelOffset(int target);
 
-        bool getIntFIFOBufferFullEnabled();
-        void setIntFIFOBufferFullEnabled(bool enabled);
-        bool getIntDataReadyEnabled();
-        void setIntDataReadyEnabled(bool enabled);
+    void autoCalibrateYAccelOffset(int target);
 
-        uint8_t getIntStatus0();
-        uint8_t getIntStatus1();
-        uint8_t getIntStatus2();
-        uint8_t getIntStatus3();
-        bool getIntFreefallStatus();
-        bool getIntShockStatus();
-        bool getIntStepStatus();
-        bool getIntMotionStatus();
-        bool getIntZeroMotionStatus();
-        bool getIntTapStatus();
-        bool getIntDoubleTapStatus();
-        bool getIntFIFOBufferFullStatus();
-        bool getIntDataReadyStatus();
+    void autoCalibrateZAccelOffset(int target);
 
-        void getMotion6(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy, int16_t* gz);
-        void getAcceleration(int16_t* x, int16_t* y, int16_t* z);
-        int16_t getAccelerationX();
-        int16_t getAccelerationY();
-        int16_t getAccelerationZ();
+    bool getAccelOffsetEnabled();
 
-        int16_t getTemperature();
+    void setAccelOffsetEnabled(bool enabled);
 
-        void getRotation(int16_t* x, int16_t* y, int16_t* z);
-        int16_t getRotationX();
-        int16_t getRotationY();
-        int16_t getRotationZ();
+    int8_t getXAccelOffset();
 
-        bool getXNegShockDetected();
-        bool getXPosShockDetected();
-        bool getYNegShockDetected();
-        bool getYPosShockDetected();
-        bool getZNegShockDetected();
-        bool getZPosShockDetected();
+    void setXAccelOffset(int8_t offset);
 
-        bool getXNegMotionDetected();
-        bool getXPosMotionDetected();
-        bool getYNegMotionDetected();
-        bool getYPosMotionDetected();
-        bool getZNegMotionDetected();
-        bool getZPosMotionDetected();
+    int8_t getYAccelOffset();
 
-        bool getXNegTapDetected();
-        bool getXPosTapDetected();
-        bool getYNegTapDetected();
-        bool getYPosTapDetected();
-        bool getZNegTapDetected();
-        bool getZPosTapDetected();
+    void setYAccelOffset(int8_t offset);
 
-        bool getFIFOHeaderModeEnabled();
-        void setFIFOHeaderModeEnabled(bool enabled);
-        void resetFIFO();
+    int8_t getZAccelOffset();
 
-        uint16_t getFIFOCount();
-        void getFIFOBytes(uint8_t *data, uint16_t length);
+    void setZAccelOffset(int8_t offset);
 
-        uint8_t getDeviceID();
+    uint8_t getFreefallDetectionThreshold();
 
-        uint8_t getRegister(uint8_t reg);
-        void setRegister(uint8_t reg, uint8_t data);
+    void setFreefallDetectionThreshold(uint8_t threshold);
 
-        bool getIntEnabled();
-        void setIntEnabled(bool enabled);
-        bool getInterruptMode();
-        void setInterruptMode(bool mode);
-        bool getInterruptDrive();
-        void setInterruptDrive(bool drive);
-        uint8_t getInterruptLatch();
-        void setInterruptLatch(uint8_t latch);
-        void resetInterrupt();
-    private:
-        uint8_t buffer[14];
-        uint8_t devAddr;
+    uint8_t getFreefallDetectionDuration();
+
+    void setFreefallDetectionDuration(uint8_t duration);
+
+    uint8_t getShockDetectionThreshold();
+
+    void setShockDetectionThreshold(uint8_t threshold);
+
+    uint8_t getShockDetectionDuration();
+
+    void setShockDetectionDuration(uint8_t duration);
+
+    uint8_t getMotionDetectionThreshold();
+
+    void setMotionDetectionThreshold(uint8_t threshold);
+
+    uint8_t getMotionDetectionDuration();
+
+    void setMotionDetectionDuration(uint8_t duration);
+
+    uint8_t getZeroMotionDetectionThreshold();
+
+    void setZeroMotionDetectionThreshold(uint8_t threshold);
+
+    uint8_t getZeroMotionDetectionDuration();
+
+    void setZeroMotionDetectionDuration(uint8_t duration);
+
+    uint8_t getTapDetectionThreshold();
+
+    void setTapDetectionThreshold(uint8_t threshold);
+
+    bool getTapShockDuration();
+
+    void setTapShockDuration(bool duration);
+
+    bool getTapQuietDuration();
+
+    void setTapQuietDuration(bool duration);
+
+    uint8_t getDoubleTapDetectionDuration();
+
+    void setDoubleTapDetectionDuration(uint8_t duration);
+
+    uint8_t getStepDetectionMode();
+
+    void setStepDetectionMode(BMI160StepMode mode);
+
+    bool getStepCountEnabled();
+
+    void setStepCountEnabled(bool enabled);
+
+    uint16_t getStepCount();
+
+    void resetStepCount();
+
+    bool getIntFreefallEnabled();
+
+    void setIntFreefallEnabled(bool enabled);
+
+    bool getIntShockEnabled();
+
+    void setIntShockEnabled(bool enabled);
+
+    bool getIntStepEnabled();
+
+    void setIntStepEnabled(bool enabled);
+
+    bool getIntMotionEnabled();
+
+    void setIntMotionEnabled(bool enabled);
+
+    bool getIntZeroMotionEnabled();
+
+    void setIntZeroMotionEnabled(bool enabled);
+
+    bool getIntTapEnabled();
+
+    void setIntTapEnabled(bool enabled);
+
+    bool getIntDoubleTapEnabled();
+
+    void setIntDoubleTapEnabled(bool enabled);
+
+    bool getGyroFIFOEnabled();
+
+    void setGyroFIFOEnabled(bool enabled);
+
+    bool getAccelFIFOEnabled();
+
+    void setAccelFIFOEnabled(bool enabled);
+
+    bool getIntFIFOBufferFullEnabled();
+
+    void setIntFIFOBufferFullEnabled(bool enabled);
+
+    bool getIntDataReadyEnabled();
+
+    void setIntDataReadyEnabled(bool enabled);
+
+    uint8_t getIntStatus0();
+
+    uint8_t getIntStatus1();
+
+    uint8_t getIntStatus2();
+
+    uint8_t getIntStatus3();
+
+    bool getIntFreefallStatus();
+
+    bool getIntShockStatus();
+
+    bool getIntStepStatus();
+
+    bool getIntMotionStatus();
+
+    bool getIntZeroMotionStatus();
+
+    bool getIntTapStatus();
+
+    bool getIntDoubleTapStatus();
+
+    bool getIntFIFOBufferFullStatus();
+
+    bool getIntDataReadyStatus();
+
+    void getMotion6(int16_t *ax, int16_t *ay, int16_t *az, int16_t *gx, int16_t *gy, int16_t *gz);
+
+    void getAcceleration(int16_t *x, int16_t *y, int16_t *z);
+
+    int16_t getAccelerationX();
+
+    int16_t getAccelerationY();
+
+    int16_t getAccelerationZ();
+
+    int16_t getTemperature();
+
+    void getRotation(int16_t *x, int16_t *y, int16_t *z);
+
+    int16_t getRotationX();
+
+    int16_t getRotationY();
+
+    int16_t getRotationZ();
+
+    bool getXNegShockDetected();
+
+    bool getXPosShockDetected();
+
+    bool getYNegShockDetected();
+
+    bool getYPosShockDetected();
+
+    bool getZNegShockDetected();
+
+    bool getZPosShockDetected();
+
+    bool getXNegMotionDetected();
+
+    bool getXPosMotionDetected();
+
+    bool getYNegMotionDetected();
+
+    bool getYPosMotionDetected();
+
+    bool getZNegMotionDetected();
+
+    bool getZPosMotionDetected();
+
+    bool getXNegTapDetected();
+
+    bool getXPosTapDetected();
+
+    bool getYNegTapDetected();
+
+    bool getYPosTapDetected();
+
+    bool getZNegTapDetected();
+
+    bool getZPosTapDetected();
+
+    bool getFIFOHeaderModeEnabled();
+
+    void setFIFOHeaderModeEnabled(bool enabled);
+
+    void resetFIFO();
+
+    uint16_t getFIFOCount();
+
+    void getFIFOBytes(uint8_t *data, uint16_t length);
+
+    uint8_t getDeviceID();
+
+    uint8_t getRegister(uint8_t reg);
+
+    void setRegister(uint8_t reg, uint8_t data);
+
+    bool getIntEnabled();
+
+    void setIntEnabled(bool enabled);
+
+    bool getInterruptMode();
+
+    void setInterruptMode(bool mode);
+
+    bool getInterruptDrive();
+
+    void setInterruptDrive(bool drive);
+
+    uint8_t getInterruptLatch();
+
+    void setInterruptLatch(uint8_t latch);
+
+    void resetInterrupt();
+
+private:
+    uint8_t buffer[14];
+    uint8_t devAddr;
 };
 
 #endif /* _BMI160_H_ */

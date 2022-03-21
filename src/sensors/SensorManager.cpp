@@ -32,12 +32,9 @@
 #include "icm20948sensor.h"
 #include "ErroneousSensor.h"
 
-namespace SlimeVR
-{
-    namespace Sensors
-    {
-        void SensorManager::setup()
-        {
+namespace SlimeVR {
+    namespace Sensors {
+        void SensorManager::setup() {
             uint8_t firstIMUAddress = 0;
             uint8_t secondIMUAddress = 0;
 
@@ -52,12 +49,9 @@ namespace SlimeVR
 #error Unsupported primary IMU
 #endif
 
-                if (firstIMUAddress == 0)
-                {
+                if (firstIMUAddress == 0) {
                     m_Sensor1 = new ErroneousSensor(0, IMU);
-                }
-                else
-                {
+                } else {
                     m_Logger.trace("Primary IMU found at address 0x%02X", firstIMUAddress);
 
 #if IMU == IMU_BNO080 || IMU == IMU_BNO085 || IMU == IMU_BNO086
@@ -89,16 +83,11 @@ namespace SlimeVR
 #error Unsupported secondary IMU
 #endif
 
-                if (secondIMUAddress == firstIMUAddress)
-                {
+                if (secondIMUAddress == firstIMUAddress) {
                     m_Logger.debug("No secondary IMU connected");
-                }
-                else if (secondIMUAddress == 0)
-                {
+                } else if (secondIMUAddress == 0) {
                     m_Sensor2 = new ErroneousSensor(1, SECOND_IMU);
-                }
-                else
-                {
+                } else {
                     m_Logger.trace("Secondary IMU found at address 0x%02X", secondIMUAddress);
 
 #if SECOND_IMU == IMU_BNO080 || SECOND_IMU == IMU_BNO085 || SECOND_IMU == IMU_BNO086
@@ -120,14 +109,12 @@ namespace SlimeVR
             }
         }
 
-        void SensorManager::update()
-        {
+        void SensorManager::update() {
             // Gather IMU data
             m_Sensor1->motionLoop();
             m_Sensor2->motionLoop();
 
-            if (!ServerConnection::isConnected())
-            {
+            if (!ServerConnection::isConnected()) {
                 return;
             }
 

@@ -28,19 +28,27 @@
 #include <BMI160.h>
 
 class BMI160Sensor : public Sensor {
-    public:
-        BMI160Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("BMI160Sensor", IMU_BMI160, id, address, rotation){};
-        ~BMI160Sensor(){};
-        void motionSetup() override final;
-        void motionLoop() override final;
-        void startCalibration(int calibrationType) override final;
-        void getScaledValues(float Gxyz[3], float Axyz[3]);
-        float getTemperature();
-    private:
-        BMI160 imu {};
-        CalibrationConfig * calibration;
-        float q[4] {1.0f, 0.0f, 0.0f, 0.0f};
-        // Loop timing globals
-        uint32_t now = 0, last = 0;   //micros() timers
-        float deltat = 0;                  //loop time in seconds
+public:
+    BMI160Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("BMI160Sensor", IMU_BMI160, id, address,
+                                                                       rotation) {};
+
+    ~BMI160Sensor() {};
+
+    void motionSetup() override final;
+
+    void motionLoop() override final;
+
+    void startCalibration(int calibrationType) override final;
+
+    void getScaledValues(float Gxyz[3], float Axyz[3]);
+
+    float getTemperature();
+
+private:
+    BMI160 imu{};
+    CalibrationConfig *calibration;
+    float q[4]{1.0f, 0.0f, 0.0f, 0.0f};
+    // Loop timing globals
+    uint32_t now = 0, last = 0;   //micros() timers
+    float deltat = 0;                  //loop time in seconds
 };

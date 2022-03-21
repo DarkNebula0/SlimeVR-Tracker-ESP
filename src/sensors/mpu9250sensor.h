@@ -25,14 +25,19 @@
 
 #include <MPU9250_6Axis_MotionApps_V6_12.h>
 
-class MPU9250Sensor : public Sensor
-{
+class MPU9250Sensor : public Sensor {
 public:
-    MPU9250Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("MPU9250Sensor", IMU_MPU9250, id, address, rotation){};
-    ~MPU9250Sensor(){};
+    MPU9250Sensor(uint8_t id, uint8_t address, float rotation) : Sensor("MPU9250Sensor", IMU_MPU9250, id, address,
+                                                                        rotation) {};
+
+    ~MPU9250Sensor() {};
+
     void motionSetup() override final;
+
     void motionLoop() override final;
+
     void startCalibration(int calibrationType) override final;
+
     void getMPUScaled();
 
 private:
