@@ -26,16 +26,16 @@
 // ================================================
 
 // Set parameters of IMU and board used
-#define IMU IMU_BNO085
+#define IMU IMU_ICM20948
 #define SECOND_IMU IMU
-#define BOARD BOARD_SLIMEVR
+#define BOARD BOARD_WROOM32
 #define IMU_ROTATION DEG_90
-#define SECOND_IMU_ROTATION DEG_270
+#define SECOND_IMU_ROTATION DEG_90
 
 // Battery monitoring options (comment to disable):
 // BAT_EXTERNAL for ADC pin, BAT_INTERNAL for internal - can detect only low battery, BAT_MCP3021 for external ADC
-#define BATTERY_MONITOR BAT_EXTERNAL
-#define BATTERY_SHIELD_RESISTANCE 180 //130k BatteryShield, 180k SlimeVR or fill in external resistor value in kOhm
+//#define BATTERY_MONITOR BAT_EXTERNAL
+//#define BATTERY_SHIELD_RESISTANCE 180 //130k BatteryShield, 180k SlimeVR or fill in external resistor value in kOhm
 
 // Board-specific configurations
 #if BOARD == BOARD_SLIMEVR || BOARD == BOARD_SLIMEVR_DEV

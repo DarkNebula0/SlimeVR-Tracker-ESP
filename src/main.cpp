@@ -33,15 +33,13 @@
 #include "ledmgr.h"
 #include "batterymonitor.h"
 #include "logging/Logger.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 SlimeVR::Logging::Logger logger("SlimeVR");
 SlimeVR::Sensors::SensorManager sensorManager;
 
-int sensorToCalibrate = -1;
-bool blinking = false;
-unsigned long blinkStart = 0;
 unsigned long loopTime = 0;
-bool secondImuActive = false;
 BatteryMonitor battery;
 
 void setup()

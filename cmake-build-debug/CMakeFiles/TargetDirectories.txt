@@ -1,0 +1,5 @@
+C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/cmake-build-debug/CMakeFiles/Production.dir
+C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/cmake-build-debug/CMakeFiles/esp32.dir
+C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/app12/dev/slime/SlimeVR-Tracker-ESP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
