@@ -32,11 +32,11 @@ public:
 
     ~MPU9250Sensor() {};
 
-    void motionSetup() override final;
+    void motionSetup() final;
 
-    void motionLoop() override final;
+    void motionLoop() final;
 
-    void startCalibration(int calibrationType) override final;
+    void startCalibration(int calibrationType) final;
 
     void getMPUScaled();
 

@@ -29,7 +29,7 @@ void Network::setUp() {
     WiFiNetwork::setUp();
 }
 
-void Network::update(Sensor *const sensor, Sensor *const sensor2) {
+void Network::update(const Sensor *sensor, const Sensor *sensor2) {
     WiFiNetwork::upkeep();
     if (WiFiNetwork::isConnected()) {
         if (lastWifiConnected == false) {

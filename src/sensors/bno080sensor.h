@@ -30,15 +30,15 @@ public:
 
     ~BNO080Sensor() {};
 
-    void motionSetup() override final;
+    void motionSetup() final;
 
-    void motionLoop() override final;
+    void motionLoop() final;
 
-    void sendData() override final;
+    void sendData() final;
 
-    void startCalibration(int calibrationType) override final;
+    void startCalibration(int calibrationType) final;
 
-    uint8_t getSensorState() override final;
+    uint8_t getSensorState() const final;
 
 private:
     BNO080 imu{};

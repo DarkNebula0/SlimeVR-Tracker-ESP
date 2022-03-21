@@ -193,7 +193,7 @@ void BNO080Sensor::motionLoop() {
     }
 }
 
-uint8_t BNO080Sensor::getSensorState() {
+uint8_t BNO080Sensor::getSensorState() const {
     return lastReset > 0 ? SensorStatus::SENSOR_ERROR : isWorking() ? SensorStatus::SENSOR_OK
                                                                     : SensorStatus::SENSOR_OFFLINE;
 }

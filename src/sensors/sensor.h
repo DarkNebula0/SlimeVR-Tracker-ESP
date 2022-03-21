@@ -45,7 +45,10 @@ public:
         m_Logger.setTag(buf);
     }
 
-    virtual ~Sensor() {};
+    Sensor() : Sensor("EmptySensor", 255, 0, 0, 0.0) {}
+
+
+    virtual ~Sensor() = default;
 
     virtual void motionSetup() {};
 
@@ -55,17 +58,17 @@ public:
 
     virtual void startCalibration(int calibrationType) {};
 
-    virtual uint8_t getSensorState();
+    virtual uint8_t getSensorState() const;
 
-    bool isWorking() {
+    bool isWorking() const {
         return working;
     };
 
-    uint8_t getSensorId() {
+    uint8_t getSensorId() const {
         return sensorId;
     };
 
-    uint8_t getSensorType() {
+    uint8_t getSensorType() const {
         return sensorType;
     };
 

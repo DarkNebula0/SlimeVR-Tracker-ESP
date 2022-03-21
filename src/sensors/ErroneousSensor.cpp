@@ -30,7 +30,7 @@ namespace SlimeVR {
             m_Logger.error("IMU of type %s failed to initialize", getIMUNameByType(m_ExpectedType));
         }
 
-        uint8_t ErroneousSensor::getSensorState() {
+        uint8_t ErroneousSensor::getSensorState() const {
             return SENSOR_ERROR;
         };
     }

@@ -34,11 +34,11 @@ public:
 
     ~BMI160Sensor() {};
 
-    void motionSetup() override final;
+    void motionSetup() final;
 
-    void motionLoop() override final;
+    void motionLoop() final;
 
-    void startCalibration(int calibrationType) override final;
+    void startCalibration(int calibrationType) final;
 
     void getScaledValues(float Gxyz[3], float Axyz[3]);
 

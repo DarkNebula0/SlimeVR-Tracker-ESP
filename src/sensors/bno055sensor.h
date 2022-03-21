@@ -31,11 +31,11 @@ public:
 
     ~BNO055Sensor() {};
 
-    void motionSetup() override final;
+    void motionSetup() final;
 
-    void motionLoop() override final;
+    void motionLoop() final;
 
-    void startCalibration(int calibrationType) override final;
+    void startCalibration(int calibrationType) final;
 
 private:
     Adafruit_BNO055 imu;

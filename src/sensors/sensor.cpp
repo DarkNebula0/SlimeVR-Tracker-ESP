@@ -25,7 +25,7 @@
 #include <i2cscan.h>
 #include "calibration.h"
 
-uint8_t Sensor::getSensorState() {
+uint8_t Sensor::getSensorState() const {
     return isWorking() ? SensorStatus::SENSOR_OK : SensorStatus::SENSOR_OFFLINE;
 }
 

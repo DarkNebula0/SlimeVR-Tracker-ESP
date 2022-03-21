@@ -40,13 +40,13 @@ public:
 
     ~ICM20948Sensor() override = default;
 
-    void motionSetup() override final;
+    void motionSetup() final;
 
-    void motionLoop() override final;
+    void motionLoop() final;
 
-    void sendData() override final;
+    void sendData() final;
 
-    void startCalibration(int calibrationType) override final;
+    void startCalibration(int calibrationType) final;
 
     void save_bias(bool repeat);
 

@@ -34,7 +34,7 @@
 namespace ServerConnection {
     void connect();
 
-    void update(Sensor *const sensor, Sensor *const sensor2);
+    void update(const Sensor *sensor, const Sensor *sensor2);
 
     void resetConnection();
 

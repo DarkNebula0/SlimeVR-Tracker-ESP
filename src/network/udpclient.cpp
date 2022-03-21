@@ -269,7 +269,7 @@ void Network::sendError(uint8_t reason, uint8_t sensorId) {
 }
 
 // PACKET_SENSOR_INFO 15
-void Network::sendSensorInfo(Sensor *sensor) {
+void Network::sendSensorInfo(const Sensor *sensor) {
     if (!connected) {
         return;
     }
@@ -532,7 +532,7 @@ void returnLastPacket(int len) {
     }
 }
 
-void updateSensorState(Sensor *const sensor, Sensor *const sensor2) {
+void updateSensorState(const Sensor *sensor, const Sensor *sensor2) {
     if (millis() - lastSensorInfoPacket > 1000) {
         lastSensorInfoPacket = millis();
         if (sensorStateNotified1 != sensor->getSensorState())
@@ -597,7 +597,7 @@ void ServerConnection::resetConnection() {
     LEDManager::setLedStatus(LED_STATUS_SERVER_CONNECTING);
 }
 
-void ServerConnection::update(Sensor *const sensor, Sensor *const sensor2) {
+void ServerConnection::update(const Sensor *sensor, const Sensor *sensor2) {
     if (connected) {
         int packetSize = Udp.parsePacket();
         if (packetSize) {
